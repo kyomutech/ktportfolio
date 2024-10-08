@@ -268,10 +268,10 @@ header .main-menu li a {
     display: block;
     position: relative;
     font-family: $font-poppins-sans;
-    font-size: 25px;
+    font-size: $px-18;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color: $color-palette-p-2;
+    color: $color-palette-s-1;
 }
 
 header .main-menu li a:hover {
