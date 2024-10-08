@@ -165,7 +165,7 @@ header .main-menu li a {
 }
 
 header .main-menu li a:hover {
-  color: #ffffff;
+  color: #313A42;
   text-decoration: none;
 }
 
@@ -180,13 +180,12 @@ header .main-menu li a::after {
   width: 0%;
   height: 0;
   height: 1px;
-  background: #313A42;
   transition: all 0.5s ease 0s;
 }
 
 header .main-menu li a:hover::after {
   width: 100%;
-  background: rgb(255, 255, 255);
+  background: #313A42;
   transition: all 0.5s ease 0s;
 }
 

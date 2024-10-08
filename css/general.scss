@@ -275,7 +275,7 @@ header .main-menu li a {
 }
 
 header .main-menu li a:hover {
-    color: #ffffff;
+    color: $color-palette-p-1;
     text-decoration: none;
 }
 
@@ -290,13 +290,13 @@ header .main-menu li a::after {
     width: 0%;
     height: 0;
     height: 1px;
-    background: $color-palette-p-1;
+    // background: $color-palette-p-1;
     transition: all 0.5s ease 0s;
 }
 
 header .main-menu li a:hover::after {
     width: 100%;
-    background: rgba(255, 255, 255, 1);
+    background: $color-palette-p-1;
     transition: all 0.5s ease 0s;
 }
 
