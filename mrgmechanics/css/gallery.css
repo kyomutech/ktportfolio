@@ -1,0 +1,214 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/****************************** Importación de Fuentes Web ******************************/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/****************************** Variables ******************************/
+/****************************** Mixins ******************************/
+/****************************** Estilos Globales ******************************/
+html {
+  font-size: 16px;
+  max-height: 100rem;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+h1 {
+  font-family: "PT Serif", serif;
+  color: #FF3333 !important;
+}
+
+h2 {
+  font-family: "PT Serif", serif;
+  color: #305873 !important;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+/****************************** Estilos del Nav ******************************/
+.navbar-style {
+  transition: all 1s ease;
+  background-color: #28282B !important;
+}
+
+.navbar-style:hover {
+  background-color: #28282B !important;
+  box-shadow: 0 0 0.625rem #788D91;
+}
+
+.navbar {
+  padding: 0.75rem;
+  letter-spacing: 0.25rem;
+  border-bottom: 0.25rem solid #FF3333;
+  height: 6.25rem;
+}
+
+.navbar-logo {
+  width: 12.5rem;
+  height: 3.438rem;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+
+.nav-item a {
+  color: #FF3333 !important;
+  font-size: larger;
+  font-weight: 500;
+}
+
+.navbar-menu-option {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(255, 112, 112) !important;
+  font-size: 80px;
+  transition: all 1s ease;
+}
+
+.dropdown-menu a:hover {
+  background-color: #D6D6D6 !important;
+}
+
+.option-menu:hover {
+  color: #28282B !important;
+  border-radius: 0.313rem;
+  background-color: rgb(255, 112, 112);
+  transition: all 1s ease;
+}
+
+.option-menu:active {
+  background-color: #D6D6D6;
+}
+
+.dropdown-menu a {
+  color: #FF3333;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgb(255, 112, 112);
+}
+
+/****************************** Menu Hamburguesa ******************************/
+.navbar-toggler {
+  background-color: #305873;
+  border: 0.063rem solid rgb(255, 112, 112);
+}
+
+.navbar-toggler:hover {
+  background-color: rgb(255, 112, 112);
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: #305873;
+  border-width: 0.063rem;
+}
+
+/* Líneas */
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(156, 160, 187, 0.866)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler .navbar-toggler-icon:hover {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(228, 253, 225)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/****************************** Línea separadora ******************************/
+.separator-line {
+  padding-top: 0.313rem;
+  padding-bottom: 0.313rem;
+  background-color: #FF3333;
+}
+
+/****************************** Sección: Footer ******************************/
+.footer-style {
+  height: 6.25rem;
+  padding: 0.625rem;
+  letter-spacing: 0.125rem;
+  transition: all 1s ease;
+  background-color: #28282B;
+  box-shadow: 0 -2px 4px rgb(255, 112, 112);
+}
+
+.footer-text {
+  color: #FF3333;
+  font-size: larger;
+  font-weight: 500;
+}
+
+/****************************** Estilos carrusel ******************************/
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-size: 100%, 100%;
+  background-color: #FF3333;
+  border-radius: 0.313rem;
+}
+
+.carousel-banner {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centra el contenido verticalmente */
+  background-size: cover;
+  background-position: center;
+  background-color: aliceblue !important;
+  background-blend-mode: luminosity !important;
+}
+
+.carousel-item img {
+  box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4);
+}
+
+.carousel-indicators button {
+  background-color: rgb(255, 112, 112) !important;
+}
+
+/****************************** Estilos carrusel ******************************/
+.btn-mgr-primary {
+  background-color: #305873 !important;
+  color: #f1f1f1 !important;
+  width: 18%;
+}
+
+.btn-mgr-primary:hover {
+  background-color: rgb(66, 121, 158) !important;
+  color: #f1f1f1 !important;
+}
+
+/****************************** Menu - current option ******************************/
+a[aria-current=page] {
+  pointer-events: none; /* Optional: Prevents clicking on the link */
+}
+
+a[aria-current=page].dropdown-item.option-menu.navbar-menu-option:hover {
+  background-color: rgb(255, 112, 112); /* Replace with the background color you want on hover */
+  color: inherit; /* Replace with the text color you want on hover */
+}
+
+body {
+  background-color: #f1f1f1 !important;
+}
+
+/****************************** Sección: Banner ******************************/
+.text1 {
+  padding-top: 18.75rem;
+}
+
+.credit-banner {
+  background-image: url("../imgs/dw_p1_services_banner_2.webp");
+  background-size: cover;
+  height: 93.75rem;
+  animation: efect 5s ease-in-out infinite alternate;
+}
+
+@keyframes efect {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: -100px 0;
+  }
+}/*# sourceMappingURL=gallery.css.map */

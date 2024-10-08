@@ -1,0 +1,125 @@
+@import "general.scss";
+
+@media (max-width: 1399px) {
+    .carousel-indicators {
+      display: none !important;
+    }
+
+    nav.fixed-top {
+        position: static;
+    }
+}
+
+
+
+/* Extra Small devices (landscape phones, 576px and down) */
+@media (max-width: 22.5rem){
+    .hero-content h1 {
+        font-size: $px-23;
+    }
+
+    body h2 {
+        font-size: $px-20 !important;
+    }
+
+    .hero-content p {
+        font-size: $px-14;
+    }
+
+    .hero {
+        height: 80vh; 
+        overflow: auto;
+    }
+
+    .card {
+        width: 60%;
+        margin-bottom: 40px;
+    }
+
+    .svg-background-image {
+        top: 220%;
+    }
+
+    .clip-path-1,
+    .clip-path-2 {
+        display: none;
+    }
+
+    .about-us-banner {
+        padding: 20px; /* Reduce padding */
+        height: auto; /* Adjust height if needed */
+        box-shadow: inset 0 0 0 500px rgba(226, 221, 221, 0.4); /* Adjust shadow depth */
+    }
+
+    .about-us-banner h1,
+    .apt-banner h1 {
+        font-size: 1.8rem; /* Smaller font size */
+        line-height: 1.2; /* Keep line height consistent */
+        color: $color-palette-1-1 !important;
+    }
+
+    .about-us-banner p,
+    .apt-banner p {
+        font-size: 1rem; /* Smaller font size */
+        line-height: 1.4; /* Slightly reduce line height */
+        padding-top: 7px; /* Adjust padding */
+        color: $color-palette-2-1 !important;
+    }
+}
+
+/* Extra Small devices (landscape phones, 576px and down) */
+@media (max-width: 36rem){
+    .hero-content h1 {
+        font-size: $px-15;
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 36rem){
+    .hero-content h1 {
+        font-size: $px-17;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 48rem){
+    .hero-content h1 {
+        font-size: $px-19;
+    }
+
+    .price-card:hover {
+        // background-color: red;
+        margin-top: -5px;
+        z-index: 5;
+        transform: scale(1.1);
+        transition: all 0.2s ease-in;
+        border: none;
+        /*buscar sombras generadas 
+        https://getcssscan.com/css-box-shadow-examples */
+        /*cuatro valores: desplazamiento de x, desplazamiento de y, nivel de desenfoque y color de la sombra.*/
+        /*box-shadow: -2px 3px 7px 1px cyan;*/
+        box-shadow: rgba(127, 197, 207, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.5) 0px 30px 60px -30px;
+    }
+}
+
+/* Large devices (tablets, 992px and up) */
+@media (min-width: 62rem){
+    .hero-content h1 {
+        font-size: $px-21;
+    }
+}
+
+/* X-Large devices (Larger Desktops, 1400px and up) */
+@media (min-width: 75rem){
+    .hero-content h1 {
+        font-size: $px-23;
+    }
+}
+
+/* XX-Large devices (Larger Desktops, 1400px and up) */
+@media (min-width: 87.5rem){
+    .hero-content h1 {
+        font-size: $px-25;
+    }
+}
+
