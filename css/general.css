@@ -21,7 +21,7 @@
   display: none !important;
 }
 
-/******* header *****/
+/****************************** Header ******************************/
 header {
   background: #F2F6FC;
   border-bottom: 5px solid #DB3939;
@@ -158,10 +158,10 @@ header .main-menu li a {
   display: block;
   position: relative;
   font-family: "Poppins", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   letter-spacing: 0.5px;
   text-decoration: none;
-  color: #4E5D6A;
+  color: #DB3939;
 }
 
 header .main-menu li a:hover {
@@ -202,4 +202,71 @@ header.fixed .main-menu li a {
   font-size: 20px;
 }
 
-/*******Responsive********//*# sourceMappingURL=general.css.map */
+/****************************** Language switch ******************************/
+/* Texto de idioma */
+.language-switch {
+  position: relative;
+  display: inline-block;
+  width: 2.5rem; /* Ajusta el ancho */
+  height: 1.25rem; /* Ajusta la altura */
+}
+
+.language-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(49, 58, 66, 0.4);
+  transition: 0.4s;
+  border-radius: 1.25rem; /* Ajusta el radio de borde */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px; /* Ajusta la altura */
+  width: 16px; /* Ajusta el ancho */
+  left: 0.125rem;
+  bottom: 0.125rem;
+  background-color: rgba(242, 246, 252, 0.56);
+  transition: 0.4s;
+  border-radius: 50%; /* Ajusta el radio de borde */
+}
+
+input:checked + .slider {
+  background-color: rgba(219, 57, 57, 0.4);
+}
+input:checked + .slider .lang-es {
+  color: #313A42 !important;
+  margin-right: 0.313rem;
+}
+
+input:checked + .slider:before {
+  transform: translateX(1.25rem); /* Ajusta la traducción */
+}
+
+/* Texto de idioma */
+.language-text {
+  position: relative;
+  top: -0.188rem; /* Ajusta la posición */
+  display: inline-block;
+  font-size: 0.688rem;
+}
+
+.lang-es {
+  color: #313A42;
+  margin-right: 0.313rem;
+}
+
+.lang-en {
+  color: #DB3939;
+  margin-left: 0.313rem;
+}/*# sourceMappingURL=general.css.map */

@@ -19,3 +19,4 @@ const funcionScroll = () => {
         header.classList.remove('fixed');
     }
 };
+

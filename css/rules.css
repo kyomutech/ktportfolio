@@ -34,12 +34,6 @@ header {
   transition: all 0.5s ease 0s;
 }
 
-header .contenedor {
-  margin: 0 auto;
-  display: flow-root;
-  position: relative;
-}
-
 header h1 {
   margin: 0;
 }
@@ -254,10 +248,10 @@ header.fixed .main-menu li a {
 }
 @media screen and (max-width: 1024px) {
   header.active {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(49, 58, 66, 0.4);
   }
   header .main-menu {
-    right: 35px;
+    right: 1.875rem;
   }
   header .main-menu li {
     padding: 0 5px;
@@ -288,18 +282,12 @@ header.fixed .main-menu li a {
 }
 @media screen and (max-width: 425px) {
   header.active {
-    height: 250px;
+    height: 300px;
     transition: all 1s ease 0s;
   }
   header .main-menu {
     top: -265px;
     right: 20%;
-  }
-  header.active.fixed .main-menu {
-    top: 40px;
-    display: block;
-    right: 35px;
-    width: calc(100% - 35px);
   }
   header .main-menu li,
   header.active.fixed .main-menu li {
@@ -307,7 +295,10 @@ header.fixed .main-menu li a {
   }
   header .main-menu li a {
     text-align: right;
-    color: #F2F6FC;
+    color: #4E5D6A;
     text-decoration: none;
+  }
+  header .main-menu li a:hover {
+    background-color: rgba(219, 57, 57, 0.4);
   }
 }/*# sourceMappingURL=rules.css.map */

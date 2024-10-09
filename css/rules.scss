@@ -63,10 +63,10 @@
 
 @media screen and (max-width: 1024px) {
     header.active {
-        background: rgba(0, 0, 0, 0.8);
+        background: $color-palette-p-1-transp;
     }
     header .main-menu {
-        right: 35px;
+        right: $px-30;
     }
     header .main-menu li {
         padding: 0 5px;
@@ -99,27 +99,30 @@
 
 @media screen and (max-width: 425px) {
     header.active {
-        height: 250px;
+        height: 300px;
         transition: all 1s ease 0s;
     }
     header .main-menu {
         top: -265px;
         right: 20%;
     }
-    header.active.fixed .main-menu {
-        top: 40px;
-        display: block;
-        right: 35px;
-        width: calc(100% - 35px);
-    }
+    // header.active.fixed .main-menu {
+    //     top: 40px;
+    //     display: block;
+    //     right: 35px;
+    //     width: calc(100% - 35px);
+    // }
     header .main-menu li,
     header.active.fixed .main-menu li {
         float: none !important;
     }
     header .main-menu li a {
         text-align: right;
-        color: $color-palette-p-3;
+        color: $color-palette-s-1;
         text-decoration: none;
-        
+    }
+
+    header .main-menu li a:hover {
+        background-color: $color-palette-p-2-transp;
     }
 }

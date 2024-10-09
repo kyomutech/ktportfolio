@@ -129,8 +129,7 @@ $color-contact-linkedin-hover: #0077B5;
     display: none !important;
 }
 
-
-/******* header *****/
+/****************************** Header ******************************/
 
 header {
     background: $color-palette-p-3;
@@ -268,10 +267,10 @@ header .main-menu li a {
     display: block;
     position: relative;
     font-family: $font-poppins-sans;
-    font-size: $px-18;
+    font-size: $px-20;
     letter-spacing: 0.5px;
     text-decoration: none;
-    color: $color-palette-s-1;
+    color: $color-palette-p-2;
 }
 
 header .main-menu li a:hover {
@@ -313,7 +312,72 @@ header.fixed .main-menu li a {
     font-size: 20px;
 }
 
+/****************************** Language switch ******************************/
 
-/*******Responsive********/
+/* Texto de idioma */
+.language-switch {
+    position: relative;
+    display: inline-block;
+    width: $px-40;  /* Ajusta el ancho */
+    height: $px-20;  /* Ajusta la altura */
+}
 
+.language-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
 
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $color-palette-p-1-transp;
+    transition: .4s;
+    border-radius: $px-20;  /* Ajusta el radio de borde */
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: $rem-1;  /* Ajusta la altura */
+    width: $rem-1;  /* Ajusta el ancho */
+    left: $px-2;
+    bottom: $px-2;
+    background-color: $color-palette-p-3-transp;
+    transition: .4s;
+    border-radius: $perc-50;  /* Ajusta el radio de borde */
+}
+
+input:checked + .slider {
+    background-color: $color-palette-p-2-transp;
+    .lang-es {
+        color: $color-palette-p-1 !important;
+        margin-right: $px-5;
+    }
+}
+
+input:checked + .slider:before {
+    transform: translateX($px-20);  /* Ajusta la traducción */
+}
+
+/* Texto de idioma */
+.language-text {
+    position: relative;
+    top: -$px-3;  /* Ajusta la posición */
+    display: inline-block;
+    font-size: $px-11;
+}
+
+.lang-es {
+    color: $color-palette-p-1;
+    margin-right: $px-5;
+}
+
+.lang-en {
+    color: $color-palette-p-2;
+    margin-left: $px-5;
+}
