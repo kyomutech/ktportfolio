@@ -17,6 +17,10 @@ const translations = {
     }
 }
 
+/**
+ * @name changeLanguage
+ * @description Change the language of the text from english to spanish and viceversa
+ */
 function changeLanguage() {
     // Obtiene el idioma actual y cambia al otro idioma
     const lang = document.documentElement.lang === 'en' ? 'es' : 'en';
