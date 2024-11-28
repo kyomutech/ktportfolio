@@ -73,7 +73,7 @@ header .main-menu-trigger span::before,
 header .main-menu-trigger span::after {
   width: 25px;
   height: 4px;
-  background: #313A42;
+  background: rgb(49, 58, 66);
   display: block;
   transition: all 0.5s ease 0s;
 }
@@ -166,7 +166,7 @@ header .main-menu li a {
 }
 
 header .main-menu li a:hover {
-  color: #313A42;
+  color: rgb(49, 58, 66);
   text-decoration: none;
 }
 
@@ -186,7 +186,7 @@ header .main-menu li a::after {
 
 header .main-menu li a:hover::after {
   width: 100%;
-  background: #313A42;
+  background: rgb(49, 58, 66);
   transition: all 0.5s ease 0s;
 }
 
@@ -246,7 +246,7 @@ input:checked + .slider {
   background-color: rgba(219, 57, 57, 0.4);
 }
 input:checked + .slider .lang-es {
-  color: #313A42 !important;
+  color: rgb(49, 58, 66) !important;
   margin-right: 0.313rem;
 }
 
@@ -263,7 +263,7 @@ input:checked + .slider:before {
 }
 
 .lang-es {
-  color: #313A42;
+  color: rgb(49, 58, 66);
   margin-right: 0.313rem;
 }
 
@@ -273,7 +273,7 @@ input:checked + .slider:before {
 }
 
 .welcome-section {
-  min-height: 31.25rem;
+  min-height: 62.5rem;
 }
 
 .welcome-text {
@@ -289,10 +289,10 @@ input:checked + .slider:before {
   font-size: 1.5rem;
   white-space: nowrap;
   overflow: hidden;
-  border-right: 2px solid;
   display: inline-block;
   animation: blink 0.7s step-end infinite;
   color: #DB3939;
+  font-weight: bolder;
 }
 
 @keyframes blink {

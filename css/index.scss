@@ -3,7 +3,7 @@
 
 .welcome-section {
     // background-color: $color-palette-s-1;
-    min-height: $px-500;
+    min-height: $px-1000;
 }
 
 .welcome-text {
@@ -19,10 +19,10 @@
     font-size: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
-    border-right: 2px solid;
     display: inline-block;
     animation: blink 0.7s step-end infinite;
     color: $color-palette-p-2;
+    font-weight: bolder;
 }
 
 @keyframes blink {
