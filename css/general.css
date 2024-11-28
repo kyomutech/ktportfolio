@@ -269,4 +269,11 @@ input:checked + .slider:before {
 .lang-en {
   color: #DB3939;
   margin-left: 0.313rem;
+}
+
+/****************************** Línea separadora ******************************/
+.separator-line {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  background-color: #DB3939;
 }/*# sourceMappingURL=general.css.map */

@@ -1,8 +1,29 @@
 // Initialize AutoTyping
 document.addEventListener('DOMContentLoaded', () => {
+    autoTypeMainSection();
+});
+
+function handleTransition() {
+    // Fade out the current section
+    const welcomeSection = document.querySelector('.welcome-section');
+    welcomeSection.classList.add('fade-out');
+    
+    // After fade out, set display none and fade in the new section
+    setTimeout(function () {
+        welcomeSection.style.display = 'none'; // Hide the current section
+        const starsSection = document.querySelector('.stars-section');
+        starsSection.firstElementChild.classList.add('d-flex', 'align-items-center', 'justify-content-center');
+        starsSection.classList.remove('d-none'); // Correctly remove the 'd-none' class
+        
+        // Apply fade-in transition
+        starsSection.classList.add('fade-in');
+    }, 1000); // This should match the duration of the fade-out effect
+}
+
+function autoTypeMainSection() {
     const text1 = new AutoTyping({
         id: 'auto-typing1',
-        typeText: ['Welcome to Kyomu Technologyes'],
+        typeText: ['Welcome to Kyomu Tecknologies'],
         textColor: "#DB3939",
         typeSpeed: 150,
         cursorColor: "#DB3939",
@@ -10,10 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
         waitBeforeDelete: 0,
         deleteDelay: 5000,
         waitBetweenTexts: 1000,
-        textDeleteOptions: { //deleting a text to a specific character, and typing a new sequel (object) *default(null)
-            0: { //index of strings in "typeText" Array (key-number : value-object)
-             deleteToChar: 26, //index of the characters of the selected string, where the writing new part of text beginning (number)
-             continueThis: "ies" //a new piece of text to be written (string)
+        typeInfinity: false,
+        textDeleteOptions: { 
+            0: { 
+             deleteToChar: 20, 
+             continueThis: "hnologies" 
             },
         }
     }).init();
@@ -26,7 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
         cursorColor: "#313A42",
         deleteSpeed: 75,
         waitBeforeDelete: 0,
-        deleteDelay: 60000,
+        deleteDelay: 10000,
         waitBetweenTexts: 1000,
+        typeInfinity: false
     }).init();
-});
+
+    // Wait until typing is complete, then transition sections
+    setTimeout(function () {
+        handleTransition(); // Call the new function for the transition
+    }, 15000); // This should match the total duration of typing and delay before deleting text
+}
+

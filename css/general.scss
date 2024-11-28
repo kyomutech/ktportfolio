@@ -381,3 +381,10 @@ input:checked + .slider:before {
     color: $color-palette-p-2;
     margin-left: $px-5;
 }
+
+/****************************** Línea separadora ******************************/
+.separator-line {
+    padding-top: $px-2;
+    padding-bottom: $px-2;
+    background-color: $color-palette-p-2;
+}

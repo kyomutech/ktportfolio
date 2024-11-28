@@ -13,6 +13,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
     </head>
     <body>
 
@@ -55,35 +56,74 @@
         <div class="pt-3"></div>
         <div class="pt-3"></div>
 
-        <!-- Section:  -->
+        <!-- Section: Welcome - 1st section -->
         <section class="welcome-section">
             <div class="container">
                 <div class="row" style="min-height: 1000px;">
                     <div class="col-sm-12 col-md-6 col-lg-3 d-flex align-items-center justify-content-start">
-                        <lottie-player src="https://lottie.host/c8e1b1f3-1a4a-41d2-99bf-73fd1e78070a/0PiWCI5VoL.json" autoplay loop style="width: 175%;" class="lottie-animation"></lottie-player>
+                        <lottie-player src="https://lottie.host/c8e1b1f3-1a4a-41d2-99bf-73fd1e78070a/0PiWCI5VoL.json" autoplay loop style="width: 175%;" class="lottie-astronaut1"></lottie-player>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-9 d-flex align-items-center justify-content-center">
                         <div class="row typewriter">
                             <div class="col-sm-12 col-md-12 col-lg-12"><div id="auto-typing1"></div>
                             <div class="col-sm-12 col-md-12 col-lg-12"><div id="auto-typing2"></div>
                         </div>
-                        <!-- <div class="">
-                            <div id="auto-typing1"></div>
-                        </div>
-                        <div class="">
-                            <div id="auto-typing2"></div>
-                        </div> -->
                     </div>
                 </div>
             </div>
         </section>
+
+        <section class="stars-section d-none">
+
+            <div class="star1 star"></div>
+            <div class="star2 star"></div>
+            <div class="star3 star"></div>
+            <div class="star4 star"></div>
+            <div class="star5 star"></div>
+            <div class="star6 star"></div>
+            <div class="star7 star"></div>
+            <div class="star8 star"></div>
+            <div class="star9 star"></div>
+
+            <div class="row">
+                <div class="d-flex align-items-center justify-content-center">
+                    <lottie-player src="https://lottie.host/3c3aaf0b-2327-4218-ae80-a3ac2794afff/XReCoPBgO4.json" autoplay loop style="width: 100%; height: 50%;" class="lottie-astronaut2"></lottie-player>
+                </div>
+            </div>
+            <div class="row">
+                <div class="down-arrow" style="margin-top: 30%;">
+                    <!-- <button style="background: none; border: none; padding: 0; cursor: pointer;">
+                        <img src="imgs/kt_down_arrow.png" style="height: auto; width: 2%;" alt="down-arrow">
+                    </button> -->
+
+                    <a data-scroll id="flechabtn" class="go-down d-flex align-items-center justify-content-center" href="#info-cards" title="Ir al inicio" onclick="topFunction()">
+                        <img src="imgs/kt_down_arrow2.png" class="img-fluid wow animate__animated animate__fadeInDown animate__delay-1s" style="height: auto; width: 2%;" alt="flecha para ir arriba">
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="pt-5"></div>
+        <div class="pt-5"></div>
+        <div class="pt-5"></div>
+        <div class="pt-4"></div>
+        <!-- ---------------------------------------------------------- -->
+        <!-- <section id="espiritu" class="separator-line animate__animated animate__slideInRight animate__delay-900ms"></section> -->
+        <!-- ---------------------------------------------------------- -->
+
+        <section id="info-section">
+
+
+        </section>
         
         <script src="js/translations.js"></script>
-        
         <!-- CDN carga la parte interactiva de componentes -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
+        <!-- <script src=“https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js”></script> -->
         <script src="js/AutoTyping.min.js"></script>
+        <script src="js/three.min.js"></script>
         <script src="js/general.js"></script>
         <script src="js/index.js"></script>
 
