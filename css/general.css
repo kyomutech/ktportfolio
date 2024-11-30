@@ -21,6 +21,13 @@
   display: none !important;
 }
 
+/****************************** Global styles ******************************/
+/****************************** General ******************************/
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Prevent vertical overflow */
+}
+
 /****************************** Header ******************************/
 header {
   background: #F2F6FC;
@@ -129,17 +136,6 @@ header.fixed {
   position: fixed;
 }
 
-header.fixed .logo {
-  width: 150px;
-  height: 70px;
-  transition: all 0.5s ease 0s;
-}
-
-header.fixed .main-menu-trigger {
-  margin: 29px 0px;
-  transition: all 0.5s ease 0s;
-}
-
 header .main-menu {
   position: absolute;
   top: -150px;
@@ -154,8 +150,9 @@ header .main-menu li {
 }
 
 header .main-menu li a {
-  padding: 10px 5px;
+  padding: 5px 5px;
   display: block;
+  text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
@@ -167,6 +164,7 @@ header .main-menu li a {
 header .main-menu li a:hover {
   color: #F2F6FC;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 header .main-menu li a::after {
@@ -195,7 +193,7 @@ header.active .main-menu {
 }
 
 header.active.fixed .main-menu {
-  top: 20px;
+  top: 40px;
 }
 
 header.fixed .main-menu li a {

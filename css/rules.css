@@ -22,6 +22,13 @@
   display: none !important;
 }
 
+/****************************** Global styles ******************************/
+/****************************** General ******************************/
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Prevent vertical overflow */
+}
+
 /****************************** Header ******************************/
 header {
   background: #F2F6FC;
@@ -130,17 +137,6 @@ header.fixed {
   position: fixed;
 }
 
-header.fixed .logo {
-  width: 150px;
-  height: 70px;
-  transition: all 0.5s ease 0s;
-}
-
-header.fixed .main-menu-trigger {
-  margin: 29px 0px;
-  transition: all 0.5s ease 0s;
-}
-
 header .main-menu {
   position: absolute;
   top: -150px;
@@ -155,8 +151,9 @@ header .main-menu li {
 }
 
 header .main-menu li a {
-  padding: 10px 5px;
+  padding: 5px 5px;
   display: block;
+  text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
@@ -168,6 +165,7 @@ header .main-menu li a {
 header .main-menu li a:hover {
   color: #F2F6FC;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 header .main-menu li a::after {
@@ -196,7 +194,7 @@ header.active .main-menu {
 }
 
 header.active.fixed .main-menu {
-  top: 20px;
+  top: 40px;
 }
 
 header.fixed .main-menu li a {
@@ -279,6 +277,63 @@ input:checked + .slider:before {
   background-color: #DB3939;
 }
 
+/* ********************************************************************* */
+/* ********************************************************************* */
+/* Extra Small devices (landscape phones, 576px and down) */
+@media (max-width: 576px) {
+  header.active {
+    height: 350px;
+  }
+  header .main-menu {
+    top: -265px;
+  }
+  header .main-menu li {
+    float: none !important;
+  }
+  header .main-menu li a {
+    text-align: center;
+    color: #E67575;
+    text-decoration: none;
+  }
+  header .main-menu li a:hover {
+    background-color: rgba(219, 57, 57, 0.4);
+  }
+  .lottie-astronaut1,
+  .lottie-astronaut2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75%;
+    height: 12.5rem;
+    width: 12.5rem;
+  }
+}
+/* Medium devices (tablets, 768px and up) */
+/* Large devices (tablets, 992px and up) */
+/* X-Large devices (Larger Desktops, 1400px and up) */
+/* XX-Large devices (Larger Desktops, 1400px and up) */
+@media screen and (max-width: 900px) {
+  header.fixed .logo {
+    width: 140px;
+  }
+  header.active {
+    height: 350px;
+    transition: all 0.5s ease 0s;
+  }
+  header.active.fixed .main-menu {
+    top: -65px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    right: 0;
+  }
+  header.active.fixed .main-menu {
+    top: 65px;
+  }
+  .typewriter {
+    font-size: 0.875rem;
+  }
+}
 @media screen and (max-width: 1700px) {
   header.active .main-menu {
     top: 34px;
@@ -329,7 +384,7 @@ input:checked + .slider:before {
 }
 @media screen and (max-width: 1024px) {
   header.active {
-    background: rgba(242, 246, 252, 0.56);
+    background: rgba(78, 93, 106, 0.4);
   }
   header .main-menu {
     right: 1.875rem;
@@ -340,46 +395,5 @@ input:checked + .slider:before {
   header .main-menu li a,
   header.fixed .main-menu li a {
     font-size: 15px;
-  }
-}
-@media screen and (max-width: 900px) {
-  header.fixed .logo {
-    width: 140px;
-  }
-  header.active {
-    height: 110px;
-    transition: all 0.5s ease 0s;
-  }
-  header.active.fixed .main-menu {
-    top: -65px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    right: 0;
-  }
-  header.active.fixed .main-menu {
-    top: 65px;
-  }
-}
-@media screen and (max-width: 425px) {
-  header.active {
-    height: 300px;
-    transition: all 1s ease 0s;
-  }
-  header .main-menu {
-    top: -265px;
-    right: 20%;
-  }
-  header .main-menu li,
-  header.active.fixed .main-menu li {
-    float: none !important;
-  }
-  header .main-menu li a {
-    text-align: right;
-    color: rgb(78, 93, 106);
-    text-decoration: none;
-  }
-  header .main-menu li a:hover {
-    background-color: rgba(219, 57, 57, 0.4);
   }
 }/*# sourceMappingURL=rules.css.map */

@@ -22,6 +22,13 @@
   display: none !important;
 }
 
+/****************************** Global styles ******************************/
+/****************************** General ******************************/
+body {
+  overflow-x: hidden; /* Prevent horizontal overflow */
+  overflow-y: auto; /* Prevent vertical overflow */
+}
+
 /****************************** Header ******************************/
 header {
   background: #F2F6FC;
@@ -130,17 +137,6 @@ header.fixed {
   position: fixed;
 }
 
-header.fixed .logo {
-  width: 150px;
-  height: 70px;
-  transition: all 0.5s ease 0s;
-}
-
-header.fixed .main-menu-trigger {
-  margin: 29px 0px;
-  transition: all 0.5s ease 0s;
-}
-
 header .main-menu {
   position: absolute;
   top: -150px;
@@ -155,8 +151,9 @@ header .main-menu li {
 }
 
 header .main-menu li a {
-  padding: 10px 5px;
+  padding: 5px 5px;
   display: block;
+  text-align: center;
   position: relative;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
@@ -168,6 +165,7 @@ header .main-menu li a {
 header .main-menu li a:hover {
   color: #F2F6FC;
   text-decoration: none;
+  border-radius: 5px;
 }
 
 header .main-menu li a::after {
@@ -196,7 +194,7 @@ header.active .main-menu {
 }
 
 header.active.fixed .main-menu {
-  top: 20px;
+  top: 40px;
 }
 
 header.fixed .main-menu li a {
@@ -280,20 +278,22 @@ input:checked + .slider:before {
 }
 
 .welcome-section {
-  min-height: 62.5rem;
+  height: 100vh;
+}
+
+.space-section {
+  height: 100vh;
+  background: linear-gradient(rgb(22, 27, 39), rgb(78, 93, 106));
 }
 
 .welcome-text {
   color: #DB3939 !important;
 }
 
-.lottie-astronaut1 {
-  max-width: 100%;
-}
-
-.lottie-astronaut2 {
-  transform: translate(-50%, -50%); /* Adjust the element to perfectly center */
-  width: auto;
+.lottie-astronaut1, .lottie-astronaut2 {
+  margin-top: 50%;
+  height: 25rem;
+  width: 25rem;
 }
 
 .typewriter {
@@ -301,16 +301,9 @@ input:checked + .slider:before {
   font-size: 1.5rem;
   white-space: nowrap;
   overflow: hidden;
-  display: inline-block;
   animation: blink 0.7s step-end infinite;
   color: #DB3939;
-  font-weight: bolder;
-}
-
-.stars-section {
-  position: relative;
-  min-height: 1500px;
-  background: linear-gradient(rgb(22, 27, 39), rgb(78, 93, 106));
+  font-weight: bold;
 }
 
 @keyframes blink {
@@ -342,21 +335,22 @@ input:checked + .slider:before {
     opacity: 0;
   }
 }
+/****************************** Stars ******************************/
+/* Keyframes for twinkle effect */
 /* Star styling */
 .star {
-  position: fixed;
+  position: absolute; /* Change to absolute for relative positioning within space-section */
   background-color: white;
-  height: 6px; /* Smaller star size */
-  width: 6px; /* Smaller star size */
   border-radius: 50%;
-  box-shadow: 0 0 5px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5); /* Glow effect */
+  z-index: -2; /* Place stars behind other elements */
+  box-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5); /* Adjusted glow effect */
   animation: twinkle 4s infinite alternate; /* Twinkle animation */
 }
 
 /* Keyframes for twinkle effect */
 @keyframes twinkle {
   0% {
-    opacity: 0.7;
+    opacity: 0.5;
     transform: scale(1);
   }
   50% {
@@ -364,55 +358,10 @@ input:checked + .slider:before {
     transform: scale(1.1); /* Slightly larger scale for more intense twinkle */
   }
   100% {
-    opacity: 0.7;
+    opacity: 0.5;
     transform: scale(1);
   }
 }
-.star1 {
-  margin-top: 15%;
-  margin-left: 60%;
-}
-
-.star2 {
-  margin-top: 25%;
-  margin-left: 65%;
-}
-
-.star3 {
-  margin-top: 35%;
-  margin-left: 70%;
-}
-
-.star4 {
-  margin-top: 5%;
-  margin-left: 10%;
-}
-
-.star5 {
-  margin-top: 40%;
-  margin-left: 20%;
-}
-
-.star6 {
-  margin-top: 45%;
-  margin-left: 90%;
-}
-
-.star7 {
-  margin-top: 30%;
-  margin-left: 20%;
-}
-
-.star8 {
-  margin-top: 35%;
-  margin-left: 35%;
-}
-
-.star9 {
-  margin-top: 25%;
-  margin-left: 45%;
-}
-
 .down-arrow {
   margin-top: 80%; /* Adds space between the Lottie animation and the down arrow */
   display: flex;
@@ -422,4 +371,8 @@ input:checked + .slider:before {
 .down-arrow img {
   width: 5%; /* Ensure the arrow size is proportional */
   height: auto; /* Maintain aspect ratio of the image */
+}
+
+.text-intro {
+  color: #F2F6FC;
 }/*# sourceMappingURL=index.css.map */

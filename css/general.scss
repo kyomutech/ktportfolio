@@ -129,6 +129,15 @@ $color-contact-linkedin-hover: #0077B5;
     display: none !important;
 }
 
+/****************************** Global styles ******************************/
+
+
+/****************************** General ******************************/
+body {
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    overflow-y: auto;   /* Prevent vertical overflow */
+}
+
 /****************************** Header ******************************/
 
 header {
@@ -238,17 +247,6 @@ header.fixed {
     position: fixed;
 }
 
-header.fixed .logo {
-    width: 150px;
-    height: 70px;
-    transition: all 0.5s ease 0s;
-}
-
-header.fixed .main-menu-trigger {
-    margin: 29px 0px;
-    transition: all 0.5s ease 0s;
-}
-
 header .main-menu {
     position: absolute;
     top: -150px;
@@ -263,8 +261,9 @@ header .main-menu li {
 }
 
 header .main-menu li a {
-    padding: 10px 5px;
+    padding: 5px 5px;
     display: block;
+    text-align: center;
     position: relative;
     font-family: $font-poppins-sans;
     font-size: $px-20;
@@ -276,6 +275,7 @@ header .main-menu li a {
 header .main-menu li a:hover {
     color: $color-palette-p-3;
     text-decoration: none;
+    border-radius: 5px;
 }
 
 header .main-menu li a::after {
@@ -305,7 +305,7 @@ header.active .main-menu {
 }
 
 header.active.fixed .main-menu {
-    top: 20px;
+    top: 40px;
 }
 
 header.fixed .main-menu li a {
@@ -388,3 +388,34 @@ input:checked + .slider:before {
     padding-bottom: $px-2;
     background-color: $color-palette-p-2;
 }
+
+// /****************************** Welcome & Space Slider ******************************/
+
+// #welcome-section, #stars-section {
+//     transform: translateY(0); /* Default state: no slide */
+//     transition: transform 1s ease; /* Slower sliding transition */
+// }
+
+// /* When header is active (expanded), move sections down */
+// #header.active + #welcome,
+// #header.active + #stars {
+//     transform: translateY(350px);
+// }
+
+// /****************************** Test ******************************/
+
+// /* Override the default Bootstrap container behavior */
+// .container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center; /* Vertically centers */
+//     align-items: center;
+//     height: 100vh; /* Full viewport height */
+//     padding: 0; /* Remove padding to avoid shifting */
+// }
+
+// /* Initial positioning of the sections */
+// #welcome-section, #stars-section {
+//     transform: translateY(0); /* Initially no slide */
+//     transition: transform 1s ease; /* Smooth transition */
+// }
