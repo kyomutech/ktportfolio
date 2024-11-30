@@ -114,3 +114,23 @@
     color: $color-palette-p-3;
 }
 
+/****************************** Text Intro ******************************/
+
+/* Define the floating animation */
+@keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px); /* Adjust height as needed */
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Apply the animation */
+  .floating {
+    display: inline-block; /* Ensures the animation doesn't affect layout */
+    animation: float 4s ease-in-out infinite; /* Duration, easing, and looping */
+  }

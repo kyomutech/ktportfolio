@@ -10,8 +10,9 @@
 
     // Menu items
     header.active {
-        height: 350px;
-        // transition: all 1s ease 0s;
+        // height: $px-200;
+        height: 30%;
+        transition: all 1s ease 0s;
     }
     header .main-menu {
         top: -265px;
@@ -40,138 +41,30 @@
     }
 }
 
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 577px){
+
+}
+
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px){
-    // Menu items
-    header.active {
-        height: 450px; /* Increased by 1.28x */
-    }
-    header .main-menu {
-        top: -350px; /* Increased by 1.32x */
-    }
-    header .main-menu li {
-        float: none !important;
-    }
-    header .main-menu li a {
-        text-align: center;
-        color: $color-palette-s-2;
-        text-decoration: none;
-    }
-    header .main-menu li a:hover {
-        background-color: $color-palette-p-2-transp;
-    }
-
-    .lottie-astronaut1,
-    .lottie-astronaut2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 60%; /* Decreased slightly for more space */
-        height: $px-250; /* Increased by 1.25x */
-        width: $px-250; /* Increased by 1.25x */
-    }
+    
 }
 
 /* Large devices (tablets, 992px and up) */
 @media (min-width: 992px){
-    // Menu items
-    header.active {
-        height: 500px; /* Increased by 1.43x */
-    }
-    header .main-menu {
-        top: -400px; /* Increased by 1.51x */
-    }
-    header .main-menu li {
-        float: none !important;
-    }
-    header .main-menu li a {
-        text-align: center;
-        color: $color-palette-s-2;
-        text-decoration: none;
-    }
-    header .main-menu li a:hover {
-        background-color: $color-palette-p-2-transp;
-    }
 
-    .lottie-astronaut1,
-    .lottie-astronaut2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 50%; /* Reduced for more content visibility */
-        height: $px-300; /* Increased by 1.5x */
-        width: $px-300; /* Increased by 1.5x */
-    }
 }
 
 /* X-Large devices (Larger Desktops, 1400px and up) */
 @media (min-width: 1200px){
-    // Menu items
-    header.active {
-        height: 600px; /* Increased by 1.71x */
-    }
-    header .main-menu {
-        top: -450px; /* Increased by 1.7x */
-    }
-    header .main-menu li {
-        float: none !important;
-    }
-    header .main-menu li a {
-        text-align: center;
-        color: $color-palette-s-2;
-        text-decoration: none;
-    }
-    header .main-menu li a:hover {
-        background-color: $color-palette-p-2-transp;
-    }
 
-    .lottie-astronaut1,
-    .lottie-astronaut2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40%; /* Reduced for more content visibility */
-        height: $px-350; /* Increased by 1.75x */
-        width: $px-350; /* Increased by 1.75x */
-    }
 }
 
 /* XX-Large devices (Larger Desktops, 1400px and up) */
 @media (min-width: 1400px){
-    // Menu items
-    header.active {
-        height: 700px; /* Increased by 2x */
-    }
-    header .main-menu {
-        top: -500px; /* Increased by 1.88x */
-    }
-    header .main-menu li {
-        float: none !important;
-    }
-    header .main-menu li a {
-        text-align: center;
-        color: $color-palette-s-2;
-        text-decoration: none;
-    }
-    header .main-menu li a:hover {
-        background-color: $color-palette-p-2-transp;
-    }
 
-    .lottie-astronaut1,
-    .lottie-astronaut2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30%; /* Reduced for more content visibility */
-        height: $px-400; /* Increased by 2x */
-        width: $px-400; /* Increased by 2x */
-    }
 }
-
-
-/* ********************************************************************* */
-// OLD media queries
-/* ********************************************************************* */
 
 
 @media screen and (max-width: 900px) {

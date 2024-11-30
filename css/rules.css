@@ -282,7 +282,8 @@ input:checked + .slider:before {
 /* Extra Small devices (landscape phones, 576px and down) */
 @media (max-width: 576px) {
   header.active {
-    height: 350px;
+    height: 30%;
+    transition: all 1s ease 0s;
   }
   header .main-menu {
     top: -265px;
@@ -308,6 +309,7 @@ input:checked + .slider:before {
     width: 12.5rem;
   }
 }
+/* Small devices (landscape phones, 576px and up) */
 /* Medium devices (tablets, 768px and up) */
 /* Large devices (tablets, 992px and up) */
 /* X-Large devices (Larger Desktops, 1400px and up) */

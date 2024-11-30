@@ -1,19 +1,31 @@
 const translations = {
     es: {
-        /******************* Page: Navbar *******************/
-        // menu options
+        /******************* Section: Navbar *******************/
         menuOption1: "Perfil",
         menuOption2: "Sobre mí",
         menuOption3: "Valores",
         menuOption4: "Contacto",
         menuOption5: "Proyectos",
+        /******************* Section: AutoType *******************/
+        autoTypeWelcome: "Bienvenido a Kyomu Technologies",
+        autoTypeSlogan: "",
+        /******************* Section: Space *******************/
+        spaceExplore: "Explora mi perfil, valores, proyectos y datos de contacto",
+        spaceDiscover: "Descubre mi pasión por el desarrollo web y de software a través de soluciones creativas",
     },
     en: {
+        /******************* Section: Navbar *******************/
         menuOption1: "Profile",
         menuOption2: "About me",
         menuOption3: "Values",
         menuOption4: "Contact",
         menuOption5: "Projects",
+        /******************* Section: AutoType *******************/
+        autoTypeWelcome: "Welcome to Kyomu Technologies",
+        autoTypeSlogan: "Innovating and developing success!",
+        /******************* Section: Space *******************/
+        spaceExplore: "Explore my profile, values, projects, and contact details",
+        spaceDiscover: "Discover my passion for web and software development through creative solutions",
     }
 }
 

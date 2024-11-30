@@ -85,3 +85,4 @@ function generateStars() {
         spaceSection.appendChild(star);
     }
 }
+
