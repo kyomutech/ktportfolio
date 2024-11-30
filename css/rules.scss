@@ -11,7 +11,7 @@
     // Menu items
     header.active {
         // height: $px-200;
-        height: 30%;
+        height: 40%;
         transition: all 1s ease 0s;
     }
     header .main-menu {
@@ -39,6 +39,38 @@
         height: $px-200;
         width: $px-200;
     }
+
+    .typewriter {
+        font-family: $font-anonymous-pro;
+        font-size: $px-14;
+        color: $color-palette-p-2;
+        font-weight: light !important;
+    }
+
+    .text-space {
+        color: $color-palette-p-3;
+        font-family: $font-anonymous-pro;
+        font-size: $px-14;
+    }
+
+    header .logo {
+        // display: block;
+        width: 125px;
+        height: 50px;
+        // background: url('../imgs/kt_logo_lbg.png') no-repeat top left;
+        // background-size: 95% !important;
+        // float: none;
+        // transition: all 0.5s ease 0s;
+    }
+
+    header .main-menu-trigger {
+        margin: 20px 0px;
+        cursor: pointer;
+        width: 25px;
+        height: 3px;
+        padding: 9px 0px;
+        transition: all 0.5s ease 0s;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -62,107 +94,58 @@
 }
 
 /* XX-Large devices (Larger Desktops, 1400px and up) */
-@media (min-width: 1400px){
-
-}
-
-
-@media screen and (max-width: 900px) {
-    header.fixed .logo {
-        width: 140px;
+@media (min-width: 1201px) and (max-width: 1600px){
+    header .main-menu li a {
+        text-align: center;
+        color: $color-palette-p-2;
+        text-decoration: none;
+        font-size: $px-15 !important;
     }
-    header.active {
-        height: 350px;
+
+    header.active .main-menu {
+        top: 20px !important;
         transition: all 0.5s ease 0s;
     }
-    header.active.fixed .main-menu {
-        top: -65px;
-        width: 100%;
+
+    .lottie-astronaut1,
+    .lottie-astronaut2 {
         display: flex;
         justify-content: center;
-        right: 0;
-    }
-    header.active.fixed .main-menu {
-        top: 65px;
+        align-items: center;
+        margin-top: 20%;
+        height: $px-200;
+        width: $px-200;
     }
 
     .typewriter {
+        font-family: $font-anonymous-pro;
+        font-size: $px-14;
+        color: $color-palette-p-2;
+        font-weight: light !important;
+    }
+
+    .text-space {
+        color: $color-palette-p-3;
+        font-family: $font-anonymous-pro;
         font-size: $px-14;
     }
-}
 
-@media screen and (max-width: 1700px) {
-    header.active .main-menu {
-        top: 34px;
-    }
-    header .main-menu li a,
-    header.fixed .main-menu li a {
-        font-size: 20px;
-    }
-}
-
-@media screen and (max-width: 1500px) {
-    header .main-menu li {
-        padding: 0 10px;
-    }
-    header .main-menu li a,
-    header.fixed .main-menu li a {
-        font-size: 18px;
-    }
-}
-
-@media screen and (max-width: 1300px) {
     header .logo {
-        width: 150px;
-        height: 70px;
+        display: block;
+        width: 125px;
+        height: 50px;
+        background: url('../imgs/kt_logo_lbg.png') no-repeat top left;
+        background-size: 95% !important;
+        float: none;
+        transition: all 0.5s ease 0s;
     }
-    header .main-menu li a,
-    header.fixed .main-menu li a {
-        font-size: 16px;
-    }
-    header.active .main-menu-trigger span,
-    header.active .main-menu-trigger span::before {
-        width: 23px;
-    }
-    header.active .main-menu {
-        top: 70px;
-        right: 20%;
-    }
-    header .main-menu-trigger {
-        margin: 29px 0px;
-    }
-    @-webkit-keyframes animacionTitulo {
-        0% {
-            opacity: .4;
-            left: 30%;
-        }
-        100% {
-            left: 5%;
-        }
-    }
-    @keyframes animacionTitulo {
-        0% {
-            opacity: .4;
-            left: 30%;
-        }
-        100% {
-            left: 5%;
-        }
-    }
-}
 
-@media screen and (max-width: 1024px) {
-    header.active {
-        background: $color-palette-s-1-transp;
-    }
-    header .main-menu {
-        right: $px-30;
-    }
-    header .main-menu li {
-        padding: 0 5px;
-    }
-    header .main-menu li a,
-    header.fixed .main-menu li a {
-        font-size: 15px;
+    header .main-menu-trigger {
+        margin: 20px 0px;
+        cursor: pointer;
+        width: 25px;
+        height: 3px;
+        padding: 9px 0px;
+        transition: all 0.5s ease 0s;
     }
 }

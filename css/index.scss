@@ -15,18 +15,24 @@
     color: $color-palette-p-2 !important;
 }
 
+.text-space {
+    font-size: $px-20;
+    color: $color-palette-p-3;
+    font-family: $font-anonymous-pro;
+}
+
 .lottie-astronaut1, .lottie-astronaut2 {   
-    margin-top: 50%; 
+    margin-top: 30%; 
     height: $px-400;
     width: $px-400;
 }
 
 .typewriter {
-    font-family: "Cutive Mono", monospace;
-    font-size: 1.5rem;
+    font-family: $font-anonymous-pro;
+    font-size: $px-24;
     white-space: nowrap;
     overflow: hidden;
-    animation: blink 0.7s step-end infinite;
+    animation: blink 0.8s step-end infinite;
     color: $color-palette-p-2;
     font-weight: bold;
 }
@@ -110,9 +116,7 @@
 }
 
 
-.text-intro {
-    color: $color-palette-p-3;
-}
+
 
 /****************************** Text Intro ******************************/
 

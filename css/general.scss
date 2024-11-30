@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /****************************** Importación de Fuentes Web ******************************/
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 /****************************** Variables ******************************/
 
@@ -74,6 +74,8 @@ $font-playfair-serif: 'Playfair Display', serif;
 $font-lato-sans: 'Lato', sans-serif;
 // Buttons - Navbar
 $font-poppins-sans: 'Poppins', sans-serif;
+// Autotyping - Welcome
+$font-anonymous-pro: "Anonymous Pro", monospace;
 
 $font-size-base: 16px;
 $base-width: 100vw;
@@ -340,7 +342,7 @@ header.fixed .main-menu li a {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $color-palette-p-1-transp;
+    background-color: $color-palette-s-1;
     transition: .4s;
     border-radius: $px-20;  /* Ajusta el radio de borde */
 }
@@ -382,9 +384,15 @@ input:checked + .slider:before {
     margin-right: $px-5;
 }
 
+
 .lang-en {
     color: $color-palette-p-2;
     margin-left: $px-5;
+}
+
+.lang-en-db {
+    color: $color-palette-p-3-transp !important;
+    transition: all 0.5s ease 0s;
 }
 
 /****************************** Línea separadora ******************************/

@@ -17,6 +17,10 @@ function handleTransition() {
         
         // Apply fade-in transition
         starsSection.classList.add('fade-in');
+
+        const indicatorEng = document.querySelector('.lang-es');
+        indicatorEng.classList.add('lang-en-db');
+
     }, 1000); // This should match the duration of the fade-out effect
 }
 
@@ -86,3 +90,4 @@ function generateStars() {
     }
 }
 
+console.log(window.innerWidth);
