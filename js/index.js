@@ -59,3 +59,5 @@ function autoTypeMainSection() {
     }, 15000); // This should match the total duration of typing and delay before deleting text
 }
 
+
+

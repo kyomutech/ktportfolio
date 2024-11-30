@@ -46,9 +46,9 @@ header h1 {
 
 header .logo {
   display: block;
-  width: 220px;
-  height: 115px;
-  background: url("../imgs/logo_kyomu_light_bg_1.svg") no-repeat top left;
+  width: 250px;
+  height: 100px;
+  background: url("../imgs/kt_logo_lbg.png") no-repeat top left;
   background-size: 95% !important;
   float: none;
   transition: all 0.5s ease 0s;
@@ -73,7 +73,7 @@ header .main-menu-trigger span::before,
 header .main-menu-trigger span::after {
   width: 25px;
   height: 4px;
-  background: #313A42;
+  background: rgb(49, 58, 66);
   display: block;
   transition: all 0.5s ease 0s;
 }
@@ -99,7 +99,7 @@ header.active {
 }
 
 header.active .logo {
-  background: url("../imgs/kyomu_logo_dark_bg_3.svg") no-repeat top left;
+  background: url("../imgs/kt_logo_dbg.png") no-repeat top left;
   transition: all 0.5s ease 0s;
 }
 
@@ -166,7 +166,7 @@ header .main-menu li a {
 }
 
 header .main-menu li a:hover {
-  color: #313A42;
+  color: #F2F6FC;
   text-decoration: none;
 }
 
@@ -186,7 +186,7 @@ header .main-menu li a::after {
 
 header .main-menu li a:hover::after {
   width: 100%;
-  background: #313A42;
+  background: #F2F6FC;
   transition: all 0.5s ease 0s;
 }
 
@@ -246,7 +246,7 @@ input:checked + .slider {
   background-color: rgba(219, 57, 57, 0.4);
 }
 input:checked + .slider .lang-es {
-  color: #313A42 !important;
+  color: rgb(49, 58, 66) !important;
   margin-right: 0.313rem;
 }
 
@@ -263,13 +263,20 @@ input:checked + .slider:before {
 }
 
 .lang-es {
-  color: #313A42;
+  color: rgb(49, 58, 66);
   margin-right: 0.313rem;
 }
 
 .lang-en {
   color: #DB3939;
   margin-left: 0.313rem;
+}
+
+/****************************** Línea separadora ******************************/
+.separator-line {
+  padding-top: 0.125rem;
+  padding-bottom: 0.125rem;
+  background-color: #DB3939;
 }
 
 @media screen and (max-width: 1700px) {
@@ -322,7 +329,7 @@ input:checked + .slider:before {
 }
 @media screen and (max-width: 1024px) {
   header.active {
-    background: rgba(49, 58, 66, 0.4);
+    background: rgba(242, 246, 252, 0.56);
   }
   header .main-menu {
     right: 1.875rem;
@@ -369,7 +376,7 @@ input:checked + .slider:before {
   }
   header .main-menu li a {
     text-align: right;
-    color: #4E5D6A;
+    color: rgb(78, 93, 106);
     text-decoration: none;
   }
   header .main-menu li a:hover {

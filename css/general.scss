@@ -154,9 +154,9 @@ header h1 {
 
 header .logo {
     display: block;
-    width: 220px;
-    height: 115px;
-    background: url('../imgs/logo_kyomu_light_bg_1.svg') no-repeat top left;
+    width: 250px;
+    height: 100px;
+    background: url('../imgs/kt_logo_lbg.png') no-repeat top left;
     background-size: 95% !important;
     float: none;
     transition: all 0.5s ease 0s;
@@ -207,7 +207,7 @@ header.active {
 }
 
 header.active .logo {
-    background: url('../imgs/kyomu_logo_dark_bg_3.svg') no-repeat top left;
+    background: url('../imgs/kt_logo_dbg.png') no-repeat top left;
     transition: all 0.5s ease 0s;
 }
 
@@ -274,7 +274,7 @@ header .main-menu li a {
 }
 
 header .main-menu li a:hover {
-    color: $color-palette-p-1;
+    color: $color-palette-p-3;
     text-decoration: none;
 }
 
@@ -295,7 +295,7 @@ header .main-menu li a::after {
 
 header .main-menu li a:hover::after {
     width: 100%;
-    background: $color-palette-p-1;
+    background: $color-palette-p-3;
     transition: all 0.5s ease 0s;
 }
 
