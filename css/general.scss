@@ -170,8 +170,8 @@ header h1 {
 
 header .logo {
     display: block;
-    width: 250px;
-    height: 100px;
+    width: 200px;
+    height: 80px;
     background: url('../imgs/kt_logo_lbg.png') no-repeat top left;
     background-size: 95% !important;
     float: none;
@@ -179,7 +179,7 @@ header .logo {
 }
 
 header .main-menu-trigger {
-    margin: 43px 0px;
+    margin: 35px 0px;
     cursor: pointer;
     width: 25px;
     height: 3px;
@@ -279,10 +279,18 @@ header .main-menu li a {
     color: $color-palette-p-2;
 }
 
+header .main-menu li .dropdown-menu a {
+    color: $color-palette-p-1;
+}
+
 header .main-menu li a:hover {
-    color: $color-palette-p-3;
+    color: $color-palette-p-2;
     text-decoration: none;
     border-radius: 5px;
+}
+
+.dropdown-item:hover {
+    background-color: $color-palette-s-3-transp !important; 
 }
 
 header .main-menu li a::after {
@@ -302,7 +310,7 @@ header .main-menu li a::after {
 
 header .main-menu li a:hover::after {
     width: 100%;
-    background: $color-palette-p-3;
+    background: $color-palette-s-2;
     transition: all 0.5s ease 0s;
 }
 
@@ -318,6 +326,12 @@ header.active.fixed .main-menu {
 header.fixed .main-menu li a {
     font-size: 20px;
 }
+
+.dropdown-menu {
+    background-color: $color-palette-s-3-transp !important;
+}
+
+
 
 /****************************** Language switch ******************************/
 

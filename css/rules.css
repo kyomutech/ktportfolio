@@ -53,8 +53,8 @@ header h1 {
 
 header .logo {
   display: block;
-  width: 250px;
-  height: 100px;
+  width: 200px;
+  height: 80px;
   background: url("../imgs/kt_logo_lbg.png") no-repeat top left;
   background-size: 95% !important;
   float: none;
@@ -62,7 +62,7 @@ header .logo {
 }
 
 header .main-menu-trigger {
-  margin: 43px 0px;
+  margin: 35px 0px;
   cursor: pointer;
   width: 25px;
   height: 3px;
@@ -162,10 +162,18 @@ header .main-menu li a {
   color: #DB3939;
 }
 
+header .main-menu li .dropdown-menu a {
+  color: rgb(49, 58, 66);
+}
+
 header .main-menu li a:hover {
-  color: #F2F6FC;
+  color: #DB3939;
   text-decoration: none;
   border-radius: 5px;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(222, 232, 247, 0.4) !important;
 }
 
 header .main-menu li a::after {
@@ -184,7 +192,7 @@ header .main-menu li a::after {
 
 header .main-menu li a:hover::after {
   width: 100%;
-  background: #F2F6FC;
+  background: #E67575;
   transition: all 0.5s ease 0s;
 }
 
@@ -199,6 +207,10 @@ header.active.fixed .main-menu {
 
 header.fixed .main-menu li a {
   font-size: 20px;
+}
+
+.dropdown-menu {
+  background-color: rgba(222, 232, 247, 0.4) !important;
 }
 
 /****************************** Language switch ******************************/
@@ -302,7 +314,7 @@ input:checked + .slider:before {
     text-decoration: none;
   }
   header .main-menu li a:hover {
-    background-color: rgba(219, 57, 57, 0.4);
+    background-color: none;
   }
   .lottie-astronaut1,
   .lottie-astronaut2 {
