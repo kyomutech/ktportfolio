@@ -29,30 +29,6 @@
     header .main-menu li a:hover {
         background-color: none;
     }
-
-    .lottie-astronaut1,
-    .lottie-astronaut2 {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 75%;
-        height: $px-200;
-        width: $px-200;
-    }
-
-    .typewriter {
-        font-family: $font-anonymous-pro;
-        font-size: $px-14;
-        color: $color-palette-p-2;
-        font-weight: light !important;
-    }
-
-    .text-space {
-        color: $color-palette-p-3;
-        font-family: $font-anonymous-pro;
-        font-size: $px-14;
-    }
-
     header .logo {
         // display: block;
         width: 125px;
@@ -62,7 +38,6 @@
         // float: none;
         // transition: all 0.5s ease 0s;
     }
-
     header .main-menu-trigger {
         margin: 20px 0px;
         cursor: pointer;
@@ -70,6 +45,30 @@
         height: 3px;
         padding: 9px 0px;
         transition: all 0.5s ease 0s;
+    }
+    .lottie-astronaut1,
+    .lottie-astronaut2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 75%;
+        height: $px-200;
+        width: $px-200;
+    }
+    .typewriter {
+        font-family: $font-anonymous-pro;
+        font-size: $px-14;
+        color: $color-palette-p-2;
+        font-weight: light !important;
+    }
+    .text-space div p {
+        color: $color-palette-p-3;
+        font-family: $font-anonymous-pro;
+        font-size: $px-15;
+    }
+    .lottie-down-arrow {
+        height: $px-100;
+        width: $px-100;
     }
 }
 
@@ -148,4 +147,5 @@
         padding: 9px 0px;
         transition: all 0.5s ease 0s;
     }
+    
 }

@@ -408,6 +408,18 @@ input:checked + .slider:before {
   header .main-menu li a:hover {
     background-color: none;
   }
+  header .logo {
+    width: 125px;
+    height: 50px;
+  }
+  header .main-menu-trigger {
+    margin: 20px 0px;
+    cursor: pointer;
+    width: 25px;
+    height: 3px;
+    padding: 9px 0px;
+    transition: all 0.5s ease 0s;
+  }
   .lottie-astronaut1,
   .lottie-astronaut2 {
     display: flex;
@@ -423,22 +435,14 @@ input:checked + .slider:before {
     color: #DB3939;
     font-weight: light !important;
   }
-  .text-space {
+  .text-space div p {
     color: #F2F6FC;
     font-family: "Anonymous Pro", monospace;
-    font-size: 0.875rem;
+    font-size: 0.938rem;
   }
-  header .logo {
-    width: 125px;
-    height: 50px;
-  }
-  header .main-menu-trigger {
-    margin: 20px 0px;
-    cursor: pointer;
-    width: 25px;
-    height: 3px;
-    padding: 9px 0px;
-    transition: all 0.5s ease 0s;
+  .lottie-down-arrow {
+    height: 6.25rem;
+    width: 6.25rem;
   }
 }
 /* Small devices (landscape phones, 576px and up) */
