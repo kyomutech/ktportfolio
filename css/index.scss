@@ -15,16 +15,21 @@
     color: $color-palette-p-2 !important;
 }
 
-.text-space {
+.text-space div p {
     font-size: $px-20;
-    color: $color-palette-p-3;
-    font-family: $font-anonymous-pro;
+    color: $color-palette-p-3 !important;
+    font-family: $font-anonymous-pro !important;
 }
 
 .lottie-astronaut1, .lottie-astronaut2 {   
     margin-top: 30%; 
     height: $px-400;
     width: $px-400;
+}
+
+.lottie-down-arrow {
+    height: $px-150;
+    width: $px-150;
 }
 
 .typewriter {

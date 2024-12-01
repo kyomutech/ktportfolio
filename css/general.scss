@@ -34,6 +34,7 @@ $px-70: 4.375rem;
 $px-80: 5rem;
 $px-90: 5.625rem;
 $px-100: 6.25rem;
+$px-150: 9.375rem;
 $px-200: 12.5rem;
 $px-250: 15.625rem;
 $px-300: 18.75rem;
@@ -117,6 +118,30 @@ $color-contact-instagram-hover: #8F143D;
 $color-contact-linkedin: #0AA9FF;
 $color-contact-linkedin-hover: #0077B5;
 
+// Borders
+$border-radius-btn: 50px;
+$border-radius-circle: 100%;
+$border-radius-toggler: 1px;
+
+// Box shadow
+$box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+
+// Transition info
+$transition-duration: 0.5s;
+$transition-ease: ease;
+
+/****************************** Mixins ******************************/
+@mixin transition($properties, $duration, $timing-function: ease) {
+    transition: $properties $duration $timing-function;
+}
+  
+@mixin center-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
 /****************************** Custom container ******************************/
 .custom-container {
     width: 80%;
@@ -136,13 +161,21 @@ $color-contact-linkedin-hover: #0077B5;
     display: none !important;
 }
 
-/****************************** Global styles ******************************/
-
-
 /****************************** General ******************************/
 body {
     overflow-x: hidden; /* Prevent horizontal overflow */
     overflow-y: auto;   /* Prevent vertical overflow */
+}
+
+/****************************** Global styles ******************************/
+h1, h2, h3, h4 {
+    font-family: $font-playfair-serif;
+    color: $color-palette-s-1 !important;
+}
+
+p {
+    font-family: $font-lato-sans;
+    color: $color-palette-p-1;
 }
 
 /****************************** Header ******************************/
@@ -409,40 +442,95 @@ input:checked + .slider:before {
     transition: all 0.5s ease 0s;
 }
 
-/****************************** Línea separadora ******************************/
+/****************************** Separator line ******************************/
 .separator-line {
     padding-top: $px-2;
     padding-bottom: $px-2;
     background-color: $color-palette-p-2;
 }
 
-// /****************************** Welcome & Space Slider ******************************/
+/****************************** Title lines ******************************/
+.line-decorated {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
 
-// #welcome-section, #stars-section {
-//     transform: translateY(0); /* Default state: no slide */
-//     transition: transform 1s ease; /* Slower sliding transition */
-// }
+    &::before,
+    &::after {
+        content: '';
+        flex-grow: 1;
+        height: $px-1; /* Altura de las líneas */
+        background-color: $color-palette-s-1; /* Color de las líneas */
+    }
 
-// /* When header is active (expanded), move sections down */
-// #header.active + #welcome,
-// #header.active + #stars {
-//     transform: translateY(350px);
-// }
+    &::before {
+        margin-right: $px-20; /* Espacio entre la línea y el texto */
+    }
 
-// /****************************** Test ******************************/
+    &::after {
+        margin-left: $px-20; /* Espacio entre la línea y el texto */
+    }
+  }
 
-// /* Override the default Bootstrap container behavior */
-// .container {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center; /* Vertically centers */
-//     align-items: center;
-//     height: 100vh; /* Full viewport height */
-//     padding: 0; /* Remove padding to avoid shifting */
-// }
+/****************************** Image transitions ******************************/
+.img-container {
+    position: relative;
+    display: inline-block;
+    overflow: hidden; /* Prevents overflow during scaling */
+    border-radius: $px-10;
+}
 
-// /* Initial positioning of the sections */
-// #welcome-section, #stars-section {
-//     transform: translateY(0); /* Initially no slide */
-//     transition: transform 1s ease; /* Smooth transition */
-// }
+/* Hover rectangle for background effect */
+.hover-rectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 0;
+    height: 0;
+    background-color: $color-palette-s-1-transp; /* Transparent background */
+    display: flex;
+    border-radius: $px-10;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    text-align: center;
+    transition: transform 0.7s ease, opacity 0.7s ease, width 0.7s ease, height 0.7s ease; /* Slower transition */
+}
+
+/* On hover, the rectangle expands */
+.img-container:hover .hover-rectangle {
+    transform: translate(-50%, -50%) scale(1); /* Scale up the rectangle */
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+
+/* Image styling */
+.img-values {
+    display: block;
+    width: 100%;
+    height: auto;
+    box-shadow: $box-shadow;
+}
+
+/* Custom font and size for text */
+.custom-transition-font {
+    font-size: $font-size-p-large !important;
+    color: $color-palette-p-2 !important;
+    font-family: $font-anonymous-pro;
+    font-weight: bolder;
+}
+
+/****************************** Buttons ******************************/
+
+.btn-kt-primary {
+    background-color: $color-palette-p-1 !important;
+    color: $color-palette-s-3 !important;
+}
+
+.btn-kt-primary:hover {
+    background-color: $color-palette-s-1 !important;
+}

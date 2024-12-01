@@ -12,6 +12,13 @@ const translations = {
         /******************* Section: Space *******************/
         spaceExplore: "Explora mi perfil, valores, proyectos y datos de contacto",
         spaceDiscover: "Descubre mi pasión por el desarrollo web y de software a través de soluciones creativas",
+
+        /******************* Section: Values *******************/
+        titleValues: "Valores",
+        value1: "Compromiso",
+        value2: "Resiliencia",
+        value3: "Excelencia",
+        value4: "Innovación",
     },
     en: {
         /******************* Section: Navbar *******************/
@@ -26,6 +33,13 @@ const translations = {
         /******************* Section: Space *******************/
         spaceExplore: "Explore my profile, values, projects, and contact details",
         spaceDiscover: "Discover my passion for web and software development through creative solutions",
+
+        /******************* Section: Values *******************/
+        titleValues: "Values",
+        value1: "Commitment",
+        value2: "Resilience",
+        value3: "Excellence",
+        value4: "Innovation",
     }
 }
 

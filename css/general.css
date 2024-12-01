@@ -2,6 +2,7 @@
 /****************************** Importación de Fuentes Web ******************************/
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 /****************************** Variables ******************************/
+/****************************** Mixins ******************************/
 /****************************** Custom container ******************************/
 .custom-container {
   width: 80%;
@@ -21,11 +22,21 @@
   display: none !important;
 }
 
-/****************************** Global styles ******************************/
 /****************************** General ******************************/
 body {
   overflow-x: hidden; /* Prevent horizontal overflow */
   overflow-y: auto; /* Prevent vertical overflow */
+}
+
+/****************************** Global styles ******************************/
+h1, h2, h3, h4 {
+  font-family: "Playfair Display", serif;
+  color: rgb(78, 93, 106) !important;
+}
+
+p {
+  font-family: "Lato", sans-serif;
+  color: rgb(49, 58, 66);
 }
 
 /****************************** Header ******************************/
@@ -286,9 +297,90 @@ input:checked + .slider:before {
   transition: all 0.5s ease 0s;
 }
 
-/****************************** Línea separadora ******************************/
+/****************************** Separator line ******************************/
 .separator-line {
   padding-top: 0.125rem;
   padding-bottom: 0.125rem;
   background-color: #DB3939;
+}
+
+/****************************** Title lines ******************************/
+.line-decorated {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.line-decorated::before, .line-decorated::after {
+  content: "";
+  flex-grow: 1;
+  height: 0.063rem; /* Altura de las líneas */
+  background-color: rgb(78, 93, 106); /* Color de las líneas */
+}
+.line-decorated::before {
+  margin-right: 1.25rem; /* Espacio entre la línea y el texto */
+}
+.line-decorated::after {
+  margin-left: 1.25rem; /* Espacio entre la línea y el texto */
+}
+
+/****************************** Image transitions ******************************/
+.img-container {
+  position: relative;
+  display: inline-block;
+  overflow: hidden; /* Prevents overflow during scaling */
+  border-radius: 0.625rem;
+}
+
+/* Hover rectangle for background effect */
+.hover-rectangle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 0;
+  height: 0;
+  background-color: rgba(78, 93, 106, 0.4); /* Transparent background */
+  display: flex;
+  border-radius: 0.625rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  opacity: 0;
+  text-align: center;
+  transition: transform 0.7s ease, opacity 0.7s ease, width 0.7s ease, height 0.7s ease; /* Slower transition */
+}
+
+/* On hover, the rectangle expands */
+.img-container:hover .hover-rectangle {
+  transform: translate(-50%, -50%) scale(1); /* Scale up the rectangle */
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/* Image styling */
+.img-values {
+  display: block;
+  width: 100%;
+  height: auto;
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Custom font and size for text */
+.custom-transition-font {
+  font-size: 1.5rem !important;
+  color: #DB3939 !important;
+  font-family: "Anonymous Pro", monospace;
+  font-weight: bolder;
+}
+
+/****************************** Buttons ******************************/
+.btn-kt-primary {
+  background-color: rgb(49, 58, 66) !important;
+  color: #DEE8F7 !important;
+}
+
+.btn-kt-primary:hover {
+  background-color: rgb(78, 93, 106) !important;
 }/*# sourceMappingURL=general.css.map */
