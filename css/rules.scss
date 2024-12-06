@@ -30,13 +30,8 @@
         background-color: none;
     }
     header .logo {
-        // display: block;
         width: 125px;
         height: 50px;
-        // background: url('../imgs/kt_logo_lbg.png') no-repeat top left;
-        // background-size: 95% !important;
-        // float: none;
-        // transition: all 0.5s ease 0s;
     }
     header .main-menu-trigger {
         margin: 20px 0px;
@@ -70,6 +65,56 @@
         height: $px-100;
         width: $px-100;
     }
+
+    .card-item .project-name, 
+    .card-item .project-desc {
+        display: none !important;
+    }
+
+    .card-list .card-item {
+        width: 70%; // Adjust the width to reduce by ~30%
+        margin: 0 auto; // Center the cards horizontally
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: block !important; // Ensure navigation buttons are visible
+        font-size: 18px; // Adjust button size if needed
+        margin-top: 0; // Correct alignment
+        opacity: 1; // Ensure buttons are not hidden
+        position: absolute; // Make sure buttons are positioned correctly
+        z-index: 10; // Ensure buttons are above other elements
+    }
+
+    .swiper-button-prev {
+        left: 5%; // Adjust the left positioning of the prev button
+    }
+
+    .swiper-button-next {
+        right: 5%; // Adjust the right positioning of the next button
+    }
+
+    .swiper-pagination {
+        bottom: 10px; // Adjust pagination positioning for better layout
+    }
+
+    .slider-organizer {
+        display: none !important;
+    }
+
+    .container .profile-row {
+        flex-direction: column; /* Stack the columns vertically */
+        height: 35vh !important;
+      }
+    
+      .border-right {
+        border-right: none; /* Remove the division line */
+      }
+    
+      .col-md-5 {
+        width: 100%; /* Make both columns take full width */
+        margin-bottom: 20px; /* Add some space between the two sections */
+      }
+    
 }
 
 /* Small devices (landscape phones, 576px and up) */
@@ -106,6 +151,20 @@
         transition: all 0.5s ease 0s;
     }
 
+    header .logo {
+        width: 125px;
+        height: 50px;
+    }
+
+    header .main-menu-trigger {
+        margin: 20px 0px;
+        cursor: pointer;
+        width: 25px;
+        height: 3px;
+        padding: 9px 0px;
+        transition: all 0.5s ease 0s;
+    }
+
     .lottie-astronaut1,
     .lottie-astronaut2 {
         display: flex;
@@ -128,24 +187,8 @@
         font-family: $font-anonymous-pro;
         font-size: $px-14;
     }
-
-    header .logo {
-        display: block;
-        width: 125px;
-        height: 50px;
-        background: url('../imgs/kt_logo_lbg.png') no-repeat top left;
-        background-size: 95% !important;
-        float: none;
-        transition: all 0.5s ease 0s;
+    .lottie-down-arrow {
+        height: $px-150;
+        width: $px-150;
     }
-
-    header .main-menu-trigger {
-        margin: 20px 0px;
-        cursor: pointer;
-        width: 25px;
-        height: 3px;
-        padding: 9px 0px;
-        transition: all 0.5s ease 0s;
-    }
-    
 }

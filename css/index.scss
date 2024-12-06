@@ -32,6 +32,11 @@
     width: $px-150;
 }
 
+.lottie-up-arrow {
+    width: 50px;  /* Adjust size of the arrow if needed */
+    height: 50px;
+}
+
 .typewriter {
     font-family: $font-anonymous-pro;
     font-size: $px-24;
@@ -40,6 +45,22 @@
     animation: blink 0.8s step-end infinite;
     color: $color-palette-p-2;
     font-weight: bold;
+}
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.index-db {
+    height: 60vh;
+    background: linear-gradient( rgb(22, 27, 39), rgb(78, 93, 106) );
 }
 
 // To be added in future:
@@ -143,3 +164,37 @@
     display: inline-block; /* Ensures the animation doesn't affect layout */
     animation: float 4s ease-in-out infinite; /* Duration, easing, and looping */
   }
+
+/****************************** Section: Professional Profile ******************************/
+
+/* Add a right border to the first column */
+.border-right {
+    border-right: 1px solid gray; /* Thin line with gray color */
+    height: 60%; /* 70% height of the container */
+}
+
+.border-left {
+    border-left: 0px solid gray; /* Thin line with gray color */
+    height: 60%; /* 70% height of the container */
+}
+
+.profile-name span {
+    opacity: 0;
+    transition: all 0.4s ease;
+    transform: translateY(50px);
+    display: inline-block;
+}
+
+.profile-name span.fade {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+/****************************** Scroll top ******************************/
+.goto-top {
+    position: fixed;
+    bottom: $px-50;
+    right: $px-20; 
+    width: $px-50;
+    height: $px-50;
+}

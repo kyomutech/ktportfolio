@@ -566,182 +566,92 @@ footer .footer-credit {
   box-shadow: 0 0 8px 8px white inset;
 }
 
-.welcome-section {
-  height: 100vh;
+* {
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.space-section {
-  height: 100vh;
-  background: linear-gradient(rgb(22, 27, 39), rgb(78, 93, 106));
-}
-
-.welcome-text {
-  color: #DB3939 !important;
-}
-
-.text-space div p {
-  font-size: 1.25rem;
-  color: #F2F6FC !important;
-  font-family: "Anonymous Pro", monospace !important;
-}
-
-.lottie-astronaut1, .lottie-astronaut2 {
-  margin-top: 30%;
-  height: 25rem;
-  width: 25rem;
-}
-
-.lottie-down-arrow {
-  height: 9.375rem;
-  width: 9.375rem;
-}
-
-.lottie-up-arrow {
-  width: 50px; /* Adjust size of the arrow if needed */
-  height: 50px;
-}
-
-.typewriter {
-  font-family: "Anonymous Pro", monospace;
-  font-size: 1.5rem;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: blink 0.8s step-end infinite;
-  color: #DB3939;
-  font-weight: bold;
-}
-
-.hidden {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.5s ease, visibility 0.5s ease;
-}
-
-.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-.index-db {
-  height: 60vh;
-  background: linear-gradient(rgb(22, 27, 39), rgb(78, 93, 106));
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-.fade-in {
-  animation: fadeIn 1s ease-in-out forwards;
-}
-
-.fade-out {
-  animation: fadeOut 1s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-  }
-}
-/****************************** Stars ******************************/
-/* Keyframes for twinkle effect */
-/* Star styling */
-.star {
-  position: absolute; /* Change to absolute for relative positioning within space-section */
-  background-color: white;
-  border-radius: 50%;
-  z-index: -2; /* Place stars behind other elements */
-  box-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 4px rgba(255, 255, 255, 0.5); /* Adjusted glow effect */
-  animation: twinkle 4s infinite alternate; /* Twinkle animation */
-}
-
-/* Keyframes for twinkle effect */
-@keyframes twinkle {
-  0% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.1); /* Slightly larger scale for more intense twinkle */
-  }
-  100% {
-    opacity: 0.5;
-    transform: scale(1);
-  }
-}
-.down-arrow {
-  margin-top: 80%; /* Adds space between the Lottie animation and the down arrow */
+.section-contact {
+  min-height: 90vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.down-arrow img {
-  width: 5%; /* Ensure the arrow size is proportional */
-  height: auto; /* Maintain aspect ratio of the image */
+.section-contact h2 {
+  font-size: 2.5rem;
+  color: #313a42 !important;
+  text-align: center;
+  margin-bottom: 0.625rem;
 }
 
-/****************************** Text Intro ******************************/
-/* Define the floating animation */
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px); /* Adjust height as needed */
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-/* Apply the animation */
-.floating {
-  display: inline-block; /* Ensures the animation doesn't affect layout */
-  animation: float 4s ease-in-out infinite; /* Duration, easing, and looping */
+.section-contact form {
+  width: 37.5rem;
+  text-align: center;
 }
 
-/****************************** Section: Professional Profile ******************************/
-/* Add a right border to the first column */
-.border-right {
-  border-right: 1px solid gray; /* Thin line with gray color */
-  height: 60%; /* 70% height of the container */
+form .input-box {
+  display: flex;
+  justify-content: space-between;
 }
 
-.border-left {
-  border-left: 0px solid gray; /* Thin line with gray color */
-  height: 60%; /* 70% height of the container */
+.input-box .input-field {
+  width: 49%;
 }
 
-.profile-name span {
-  opacity: 0;
-  transition: all 0.4s ease;
-  transform: translateY(50px);
-  display: inline-block;
+.field .item {
+  width: 100%;
+  padding: 1.125rem;
+  background: transparent;
+  border: 2px solid rgba(78, 93, 106, 0.4);
+  outline: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #4e5d6a;
+  margin: 12px 0;
 }
 
-.profile-name span.fade {
-  opacity: 1;
-  transform: translateY(0px);
+.field .item::-moz-placeholder {
+  color: rgba(49, 58, 66, 0.147);
 }
 
-/****************************** Scroll top ******************************/
-.goto-top {
-  position: fixed;
-  bottom: 3.125rem;
-  right: 1.25rem;
-  width: 3.125rem;
-  height: 3.125rem;
-}/*# sourceMappingURL=index.css.map */
+.field .item::placeholder {
+  color: rgba(49, 58, 66, 0.147);
+}
+
+.field .error-text {
+  font-size: 14.5px;
+  color: #E67575;
+  text-align: left;
+  margin: -5px 0 10px;
+  display: none;
+}
+
+form .textarea-field .item {
+  resize: none;
+}
+
+form .textarea-field .error-text {
+  margin-top: -10px;
+}
+
+form button {
+  padding: 12px 32px;
+  background: transparent;
+  border: 1px solid #4e5d6a;
+  outline: none;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #4e5d6a;
+  font-size: 1rem;
+  color: #4e5d6a;
+  letter-spacing: 1px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+
+form button:hover {
+  box-shadow: none;
+}/*# sourceMappingURL=contact-us.css.map */

@@ -2,18 +2,32 @@
 document.addEventListener('DOMContentLoaded', () => {
     autoTypeMainSection();
     generateStars();
+    setupProfileNameAnimation();
 });
 
 function handleTransition() {
     // Fade out the current section
     const welcomeSection = document.querySelector('.welcome-section');
+    const elements = document.querySelectorAll('.d-none');
     welcomeSection.classList.add('fade-out');
     
     // After fade out, set display none and fade in the new section
     setTimeout(function () {
         welcomeSection.style.display = 'none'; // Hide the current section
+        elements.forEach(element => {
+            // Replace 'd-none' with 'hidden' to start with
+            element.classList.remove('d-none');
+            element.classList.add('hidden');
+        
+            // Use a small delay to trigger the transition to 'visible'
+            setTimeout(() => {
+                element.classList.remove('hidden');
+                element.classList.add('visible');
+            }, 10); // Small delay to ensure the transition is applied
+        });
+
         const starsSection = document.querySelector('.space-section');
-        starsSection.classList.remove('d-none'); // Correctly remove the 'd-none' class
+        // starsSection.classList.remove('d-none'); // Correctly remove the 'd-none' class
         
         // Apply fade-in transition
         starsSection.classList.add('fade-in');
@@ -89,5 +103,85 @@ function generateStars() {
         spaceSection.appendChild(star);
     }
 }
+
+// Function to redirect user to specifi project
+function sendToProject(idProject){
+    console.log(idProject);
+    if (idProject === 'autospot') {
+        window.open("https://kyomutech.com/projects/autospot/", "_blank");
+    } else if (idProject === 'mrgmechanics') {
+        window.open("https://kyomutech.com/projects/mrgmechanics/", "_blank");
+    } else if (idProject === 'logicmathportfolio') {
+        window.open("https://kyomutech.com/projects/logicmathportfolio/", "_blank");
+    } else if (idProject === 'popovich') {
+        window.open("https://kyomutech.com/projects/popovich/", "_blank");
+    } else if (idProject === 'adabayestheorem') {
+        window.open("https://kyomutech.com/projects/adabayestheorem/", "_blank");
+    }
+}
+
+function setupProfileNameAnimation() {
+    const text = document.querySelector(".profile-name");
+    const parent = text.parentElement; // Assuming parent has the d-none class
+
+    // Observer to detect when 'd-none' is removed
+    const observer = new MutationObserver(() => {
+        if (!parent.classList.contains("d-none")) {
+            startAnimation(text); // Trigger the animation
+            observer.disconnect(); // Stop observing
+        }
+    });
+
+    // Start observing the parent for attribute changes
+    observer.observe(parent, { attributes: true });
+}
+
+function startAnimation(element) {
+    const strText = element.textContent;
+    const splitText = strText.split("");
+    element.textContent = ""; // Clear existing content
+
+    for (let i = 0; i < splitText.length; i++) {
+        element.innerHTML += `<span>${splitText[i]}</span>`;
+    }
+
+    let char = 0;
+    const timer = setInterval(() => {
+        const span = element.querySelectorAll("span")[char];
+        span.classList.add("fade");
+        char++;
+        if (char === splitText.length) {
+            clearInterval(timer);
+        }
+    }, 50);
+}
+
+//desaparece el boton ScrollTop al cargar la pagina web
+document.getElementById("arrow-up").style.display = "none";
+
+//esconder botón ScrollTop (parte superior)
+window.onscroll = function() {
+    scrollFunctionTop()
+    
+};
+
+//funcion scroll
+// function scrollFunctionTop() {
+//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+//         document.getElementById("arrow-up").style.display = "block";
+//     } else {
+//         document.getElementById("arrow-up").style.display = "none";
+//     }
+// }
+
+
+// //Funcián Scrolltop (Jquery)
+// function topFunction() {
+//     $('a.scroll-top').click(function(event) {
+//         event.preventDefault();
+//         $('html, body').animate({ scrollTop: 0 });
+//     });
+// }
+
 
 console.log(window.innerWidth);

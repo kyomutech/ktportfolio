@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Cutive+Mono&display=swap');
+@import "general.scss";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.section-contact {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: linear-gradient( rgb(22, 27, 39), rgb(78, 93, 106) );
+}
+
+.section-contact h2 {
+    font-size: $px-40;
+    color: $color-palette-p-1  !important;
+    text-align: center;
+    margin-bottom: $px-10;
+}
+
+.section-contact form {
+    width: $px-600;
+    text-align: center;
+}
+
+form .input-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-box .input-field {
+    width: 49%;
+}
+
+.field .item {
+    width: $perc-100;
+    padding: $px-18;
+    background: transparent;
+    border: 2px solid $color-palette-s-1-transp;
+    outline: none;
+    border-radius: 6px;
+    font-size: $px-16;
+    color: $color-palette-s-1;
+    margin: 12px 0;
+}
+
+.field .item::placeholder {
+    color: $color-palette-p-1-transp
+}
+
+.field .error-text {
+    font-size: 14.5px;
+    color: $color-palette-s-2;
+    text-align: left;
+    margin: -5px 0 10px;
+    display: none;
+}
+
+form .textarea-field .item {
+    resize: none;
+}
+
+form .textarea-field .error-text {
+    margin-top: -10px;
+}
+
+form button {
+    padding: 12px 32px;
+    background: transparent;
+    border: 1px solid $color-palette-s-1;
+    outline: none;
+    border-radius: 6px;
+    box-shadow: 0 0 10px $color-palette-s-1;
+    font-size: $px-16;
+    color: $color-palette-s-1;
+    letter-spacing: 1px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: .5s;
+}
+
+form button:hover {
+    box-shadow: none;
+}

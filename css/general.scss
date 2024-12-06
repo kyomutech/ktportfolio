@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /****************************** Importación de Fuentes Web ******************************/
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=JetBrains+Mono:wght@100;500&display=swap');
 
 /****************************** Variables ******************************/
 
@@ -78,6 +78,8 @@ $font-poppins-sans: 'Poppins', sans-serif;
 // Autotyping - Welcome
 $font-anonymous-pro: "Anonymous Pro", monospace;
 
+$font-jetbrains-mono:  "JetBrains Mono", monospace;
+
 $font-size-base: 16px;
 $base-width: 100vw;
 $font-size-h1: 3rem;
@@ -89,19 +91,19 @@ $font-size-btn: 1rem;
 
 // Color Palette #1
 // https://coolors.co/313A42-DB3939-F2F6FC
-$color-palette-p-1: rgb(49, 58, 66);
+$color-palette-p-1: #313a42;
 $color-palette-p-2: #DB3939;
 $color-palette-p-3: #F2F6FC;
 
 // Color Palette #2
 // https://coolors.co/4E5D6A-E67575-DEE8F7
-$color-palette-s-1: rgb(78, 93, 106);
+$color-palette-s-1: #4e5d6a;
 $color-palette-s-2: #E67575;
 $color-palette-s-3: #DEE8F7;
 
 // Color Palette #1 - Transparency
 // https://coolors.co/313A42-DB3939-F2F6FC
-$color-palette-p-1-transp: rgba(49, 58, 66, 0.4);
+$color-palette-p-1-transp: rgba(49, 58, 66, 0.147);
 $color-palette-p-2-transp: rgba(219, 57, 57, 0.4);
 $color-palette-p-3-transp: rgba(242, 246, 252, 0.56);
 
@@ -109,7 +111,7 @@ $color-palette-p-3-transp: rgba(242, 246, 252, 0.56);
 // https://coolors.co/4E5D6A-E67575-DEE8F7
 $color-palette-s-1-transp: rgba(78, 93, 106, 0.4);
 $color-palette-s-2-transp: rgba(230, 117, 117, 0.4);
-$color-palette-s-3-transp: rgba(222, 232, 247, 0.4);
+$color-palette-s-3-transp: rgba(222, 232, 247, 0.3);
 
 $color-contact-whatsapp: #22BF5B;
 $color-contact-whatsapp-hover: #15793A;
@@ -182,13 +184,14 @@ p {
 
 header {
     background: $color-palette-p-3;
-    border-bottom: 5px solid $color-palette-p-2;
+    // border-bottom: 5px solid $color-palette-p-2;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 9;
     transition: all 0.5s ease 0s;
+    box-shadow: rgba(230, 117, 117, 0.4) 0px 10px 5px -5px, rgba(219, 57, 57, 0.4) 0px 8px 16px -8px;
 }
 
 header .contenedor {
@@ -450,7 +453,7 @@ input:checked + .slider:before {
 }
 
 /****************************** Title lines ******************************/
-.line-decorated {
+.line-decorated-lb {
     position: relative;
     display: flex;
     align-items: center;
@@ -471,7 +474,32 @@ input:checked + .slider:before {
     &::after {
         margin-left: $px-20; /* Espacio entre la línea y el texto */
     }
-  }
+}
+
+.line-decorated-db {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: $color-palette-s-3 !important;
+
+    &::before,
+    &::after {
+        content: '';
+        flex-grow: 1;
+        height: $px-1; /* Altura de las líneas */
+        background-color: $color-palette-s-3; /* Color de las líneas */
+    }
+
+    &::before {
+        margin-right: $px-20; /* Espacio entre la línea y el texto */
+    }
+
+    &::after {
+        margin-left: $px-20; /* Espacio entre la línea y el texto */
+    }
+}
+
 
 /****************************** Image transitions ******************************/
 .img-container {
@@ -533,4 +561,167 @@ input:checked + .slider:before {
 
 .btn-kt-primary:hover {
     background-color: $color-palette-s-1 !important;
+}
+
+.btn-tk-ol-secondary {
+    border-color: $color-palette-p-1 !important;
+}
+
+.btn-tk-ol-secondary:hover {
+    background-color: $color-palette-s-1 !important;
+    border-color: $color-palette-s-1 !important;
+    color: $color-palette-p-3 !important;
+}
+
+/****************************** Projects - Index ******************************/
+
+.slider-wrapper {
+    overflow: hidden;
+    max-width: 1200px;
+    margin: 0 70px 55px;
+}
+
+.card-list .card-item {
+    height: auto;
+    color: #fff;
+    user-select: none;
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    backdrop-filter: blur(30px);
+    background: $color-palette-s-3-transp;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.card-list .card-item .project-image {
+    width: 200px;
+    height: 57px;
+    // margin-bottom: 40px;
+    padding: 4px;
+}
+
+.card-list .card-item .project-name h2 {
+    color: $color-palette-p-3 !important;
+}
+
+.card-list .card-item .project-desc {
+    font-size: 1.15rem;
+    color: #e3e3e3;
+    font-weight: 500;
+    margin: 14px 0;
+}
+
+.card-list .card-item .go-project-btn {
+    width: 50px;
+}
+
+.card-list .card-item .go-project-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.slider-wrapper .swiper-pagination-bullet {
+    background: #fff;
+    height: 13px;
+    width: 13px;
+    opacity: 0.5;
+}
+
+.slider-wrapper .swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+.slider-wrapper .swiper-slide-button {
+    color: $color-palette-s-1;
+    margin-top: 2%;
+    transition: 0.2s ease;
+}
+
+.slider-wrapper .swiper-slide-button:hover {
+    color: $color-palette-s-2;
+}
+
+@media (max-width: 768px) {
+    .slider-wrapper {
+        margin: 0 10px 40px;
+    }
+
+    .slider-wrapper .swiper-slide-button {
+        display: none;
+  }
+}
+
+/****************************** Footer ******************************/
+
+footer {
+    background: $color-palette-p-3;
+    color: $color-palette-p-1;
+    text-align: center;
+    padding: 1rem 1rem;
+    box-shadow: rgba(230, 117, 117, 0.4) 0px -10px 5px -5px, rgba(219, 57, 57, 0.4) 0px -8px 16px -8px;
+}
+
+footer .custom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+footer .footer-menu {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-menu li a {
+    text-decoration: none;
+    color: $color-palette-p-1;
+    font-family: $font-poppins-sans;
+    font-size: $px-16;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease;
+}
+
+footer .footer-menu li a:hover {
+    color: $color-palette-s-2;
+}
+
+footer .footer-credit {
+    font-size: $px-14;
+    color: $color-palette-p-1;
+}
+
+.footer-icons a i {
+    color: $color-palette-p-1; /* Default color */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+    margin: 0px 10px;
+}
+
+.footer-icons a i:hover {
+    color: $color-palette-s-2; /* Change this to your desired hover color */
+}
+
+/****************************** Privacy Policy ******************************/
+
+.privacy-policy {
+    height: 165vh;
+}
+
+.container-pp {
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+.privacy-policy-img-style img {
+    /* you need to match the shadow color to your background or image border for the desired effect*/
+    box-shadow: 0 0 8px 8px white inset;
 }

@@ -12,6 +12,8 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
     </head>
     <body>
@@ -26,14 +28,15 @@
                     <div class="main-menu-trigger" id="btn-main-menu"><span></span></div>
                 </div>
                 <ul class="main-menu">
-                    <li><a data-translate="menuOption1" class="text-uppercase fw-bolder" href="#">Profile</a></li>
-                    <li><a data-translate="menuOption2" class="text-uppercase fw-bolder" href="#">About me</a></li>
-                    <li><a data-translate="menuOption3" class="text-uppercase fw-bolder" href="#">Values</a></li>
-                    <li><a data-translate="menuOption4" class="text-uppercase fw-bolder" href="#">Contact</a></li>
+                    <li><a id="resume-link"  data-translate="menuOption1" class="text-uppercase fw-bolder" href="" target="_blank">Resume</a></li>
+                    <li><a data-translate="menuOption2" class="text-uppercase fw-bolder" href="profile.html">Profile</a></li>
+                    <!-- <li><a data-translate="menuOption3" class="text-uppercase fw-bolder" href="#">Values</a></li> -->
+                    <li><a data-translate="menuOption4" class="text-uppercase fw-bolder" href="contact-us.html">Contact</a></li>
                     <li class="nav-item dropdown">
                         <a data-translate="menuOption5" class="nav-link dropdown-toggle text-uppercase fw-bolder fw-" id="desplegable1" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Projects</a>
                         <div class="dropdown-menu text-left" aria-labelledby="desplegable1">
                             <a class="dropdown-item option-menu text-uppercase fw-bolder" href="https://kyomutech.com/projects/autospot" target="_blank">Autospot</a>
+                            <a class="dropdown-item option-menu text-uppercase fw-bolder" href="https://kyomutech.com/projects/popovich" target="_blank">Popovich</a>
                             <a class="dropdown-item option-menu text-uppercase fw-bolder" href="https://kyomutech.com/projects/mrgmechanics"target="_blank">MRG Mechanics</a>
                             <a class="dropdown-item option-menu text-uppercase fw-bolder" href="https://kyomutech.com/projects/logicmathportfolio" target="_blank">Lógica & Matemática</a>
                             <a class="dropdown-item option-menu text-uppercase fw-bolder" href="https://kyomutech.com/projects/adabayestheorem" target="_blank">ADA - Sistema Predictivo</a>
@@ -52,7 +55,7 @@
         </header>
 
         <!-- Section: Welcome - Autotyping -->
-        <section id="welcome" class="welcome-section">
+        <section id="welcome" class="welcome-section visible">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-center">
                     <lottie-player src="https://lottie.host/451a4101-b03b-4d17-9313-2cfffcaa940c/xZaLdO8SPi.json" autoplay loop class="lottie-astronaut1"></lottie-player>
@@ -72,7 +75,7 @@
         </section>
 
         <!-- Section: Welcome - Space -->
-        <section id="space" class="space-section d-none">
+        <section id="space" class="space-section d-none hidden">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-center">
                     <lottie-player src="https://lottie.host/3c3aaf0b-2327-4218-ae80-a3ac2794afff/XReCoPBgO4.json" autoplay loop class="lottie-astronaut2"></lottie-player>
@@ -84,29 +87,129 @@
                 </div>
                 <div>
                     <div class="d-flex align-items-center justify-content-center animate__animated animate__fadeInDown animate__delay-4000ms">
-                        <a href="#values">
+                        <a href="#profile">
                             <lottie-player src="https://lottie.host/f3af5197-065c-4464-8e0a-02ee0fa81b81/Q296UoM11q.json" autoplay loop class="lottie-down-arrow"></lottie-player>
                         </a>
                     </div>
                 </div>
             </div>
+            <div id="profile"></div>
         </section>
 
-        <!-- Sección: Valores -->
+
+        <!-- Section: Profile -->
         <!-- ---------------------------------------------------------- -->
-        <section id="values" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms"></section>
+        <section id="" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
         <!-- ---------------------------------------------------------- -->
 
-        <div class="pt-5"></div>
+        <div class="pt-5 d-none"></div>
 
-        <section class="pt-5 pb-5">
+        <section class="pt-5 pb-5 section-profile d-none">
             <div class="container">
                 <div class="text-center">
-                    <h2 data-translate="titleValues" class="line-decorated text-uppercase">Values</h2>
+                    <h2 data-translate="profileHeading" class="line-decorated-lb text-uppercase">Professional Profile</h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row profile-row justify-content-center align-items-center" style="height: 40vh;">
+                    <!-- First Column (Title) with right border -->
+                    <div class="col-md-5 d-flex flex-column align-items-center justify-content-center border-right">
+                        <h3 class="text-center text-uppercase profile-name mb-3">Roberto Rojas Jiménez</h3>
+                        <h4 data-translate="profilePosition" class="pt-3 text-center">Software & Web Developer</h4>
+                    </div>
+                    
+                    <!-- Second Column (Paragraph) -->
+                    <div class="col-md-5 d-flex align-items-center justify-content-center border-left">
+                        <p data-translate="profileIntro" class="animated-paragraph text-center animate__animated animate__fadeInDown animate__delay-5000ms">Explore my full professional profile skills and technologies to learn more about my expertise as a developer.</p>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <button data-translate="valuesBtn" type="button" class="btn btn-tk-ol-secondary">Know more about me</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Projects -->
+        <!-- ---------------------------------------------------------- -->
+        <section id="projects" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
+        <!-- ---------------------------------------------------------- -->
+
+        <section class="index-db pt-5 d-none">
+            <div class="container swiper">
+                <div class="text-center">
+                    <h2 data-translate="titleProjects" class="line-decorated-db text-uppercase">Projects</h2>
+                </div>
+                <div class="pt-5 slider-organizer"></div>
+                <div class="pt-5 slider-wrapper">
+                    <div class="card-list swiper-wrapper">
+                        <div class="card-item swiper-slide">
+                            <img src="imgs/kt_projects_logo_autospot.webp" alt="User Image" class="project-image">
+                            <!-- <h2 class="project-name">AutoSpot</h2> -->
+                            <p data-translate="projDesc1" class="project-desc">Web Application</p>
+                            <!-- <button data-translate="" class="btn btn-kt-primary go-project-btn">Visit</button> -->
+                            <div class="pt-3 text-center">
+                                <button id="autospot" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                            </div>
+                        </div>
+                
+                        <div class="card-item swiper-slide">
+                            <img src="imgs/kt_projects_logo_mrgmechanics.webp" alt="User Image" class="project-image">
+                            <!-- <h2 class="project-name">MRG Mechanics</h2> -->
+                            <p data-translate="projDesc2" class="project-desc">Web Design</p>
+                            <div class="pt-3 text-center">
+                                <button id="mrgmechanics" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                            </div>
+                        </div>
+                
+                        <div class="card-item swiper-slide">
+                            <img src="imgs/kt_projects_logo_logic_math.webp" alt="User Image" class="project-image">
+                            <!-- <h2 class="project-name">Lógica & Mat</h2> -->
+                            <p data-translate="projDesc3" class="project-desc">Web Application</p>
+                            <div class="pt-3 text-center">
+                                <button id="logicmathportfolio" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                            </div>
+                        </div>
+                
+                        <div class="card-item swiper-slide">
+                            <img src="imgs/kt_projects_logo_popovich.webp" alt="User Image" class="project-image">
+                            <!-- <h2 class="project-name">Popovich</h2> -->
+                            <p data-translate="projDesc4" class="project-desc">Web design</p>
+                            <div class="pt-3 text-center">
+                                <button id="popovich" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                            </div>
+                        </div>
+                
+                        <div class="card-item swiper-slide">
+                            <img src="imgs/kt_projects_logo_ada_bayes_theorem.webp" alt="User Image" class="project-image">
+                            <!-- <h2 class="project-name">ADA</h2> -->
+                            <p data-translate="projDesc5" class="project-desc">Web Application</p>
+                            <div class="pt-3 text-center">
+                                <button id="adabayestheorem" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-slide-button swiper-button-prev"></div>
+                    <div class="swiper-slide-button swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección: Values -->
+        <!-- ---------------------------------------------------------- -->
+        <section id="values" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
+        <!-- ---------------------------------------------------------- -->
+
+        <div class="pt-5 d-none"></div>
+
+        <section class="pt-5 pb-5 d-none">
+            <div class="container">
+                <div class="text-center">
+                    <h2 data-translate="titleValues" class="line-decorated-lb text-uppercase">Values</h2>
                 </div>
 
                 <div class="pt-3">
-                    <p class="text-center">Mis valores fundamentales son la base del compromiso para ofrecer soluciones que impulsan mi crecimiento profesional y el éxito de mis clientes.</p>
+                    <p data-translate="valuesIntro" class="text-center">My core values are the foundation of my commitment to delivering solutions that drive my professional growth and the success of my clients.</p>
                 </div>
 
                 <div class="row text-center">
@@ -155,22 +258,77 @@
                 </div>
             </div>
 
-            <p class="pt-5 text-center">Explora cómo estos valores definen mi visión profesional y mi compromiso con la excelencia.</p>
+            <p data-translate="valuesClose" class="pt-5 text-center">Explore how these values define my professional vision and my commitment to excellence.</p>
 
             <div class="pt-3 text-center">
-                <button type="button" class="btn btn-kt-primary">Explorar más</button>
+                <button data-translate="valuesBtn" type="button" class="btn btn-kt-primary">Explore more</button>
             </div>
         </section>
+
+         <!-- Sección: Contact -->
+        <!-- ---------------------------------------------------------- -->
+        <!-- <section id="contact" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section> -->
+        <!-- ---------------------------------------------------------- -->
+
+        <!-- <div class="d-none"></div>
+
+        <section class="index-db index-contact pt-5 d-none">
+            <div class="container">
+                <div class="text-center">
+                    <h2 data-translate="titleContact" class="line-decorated-db text-uppercase">Contact</h2>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <p class=""></p>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+
+                    </div>
+                </div>
+            </div>
+        </section> -->
+
+        <div class="goto-top">
+            <a href="#space">
+                <lottie-player src="https://lottie.host/73a5212d-7b6c-476e-b6dc-38b1ac33b692/xJnc0ehHjD.json" autoplay loop class="lottie-arrow-up"></lottie-player>
+            </a>
+        </div>
+        
+
+        <footer id="footer" class="d-none">
+            <div class="pt-3 custom-container">
+                <div class="footer-icons">
+                    <a href="https://www.linkedin.com/in/kyomu-technologies-a998ba330/" target="_blank">
+                        <i class="fa-brands fa-linkedin fa-2xl"></i>
+                    </a>
+                    <a href="https://github.com/kyomutech" target="_blank">
+                        <i class="fa-brands fa-github fa-2xl"></i>
+                    </a>
+                    <a href="" target="_blank">
+                        <i class="fa-brands fa-square-whatsapp fa-2xl"></i>
+                    </a>
+                    <a href="mailto:roberto.rojas@kyomutech.com" target="_blank">
+                        <i class="fa-solid fa-envelope fa-2xl"></i>
+                    </a>
+                </div>
+                <ul class="footer-menu">
+                    <li><a data-translate="privacyPolicy" href="privacy-policy.html" target="_blank">Privacy Policy</a></li>
+                </ul>
+                <p data-translate="reservedRights" class="footer-credit">&copy; 2024 Kyomu Technologies. All rights reserved.</p>
+            </div>
+        </footer>
         
         <script src="js/translations.js"></script>
         <!-- CDN carga la parte interactiva de componentes -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
         <!-- <script src=“https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js”></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
         <script src="js/AutoTyping.min.js"></script>
         <script src="js/three.min.js"></script>
-        <script src="js/general.js"></script>
         <script src="js/index.js"></script>
+        <script src="js/general.js"></script>
 
     </body>
 </html>
