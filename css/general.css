@@ -405,13 +405,24 @@ input:checked + .slider:before {
   background-color: #4e5d6a !important;
 }
 
-.btn-tk-ol-secondary {
+.btn-tk-ol-primary {
   border-color: #313a42 !important;
 }
 
-.btn-tk-ol-secondary:hover {
+.btn-tk-ol-primary:hover {
   background-color: #4e5d6a !important;
   border-color: #4e5d6a !important;
+  color: #F2F6FC !important;
+}
+
+.btn-tk-secondary {
+  background-color: #DEE8F7 !important;
+  width: 6.25rem;
+}
+
+.btn-tk-secondary:hover {
+  background-color: #E67575 !important;
+  border-color: #E67575 !important;
   color: #F2F6FC !important;
 }
 

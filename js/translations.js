@@ -38,9 +38,13 @@ const translations = {
         projDesc5: "Aplicación Web",
         projBtn: "Visitar proyecto",
 
-        /******************* Sección: Proyectos *******************/
-        titleContact: "Contacto",
-
+        /******************* Sección: Contacto *******************/
+        titleContact: 'Contacto',
+        contactIntro: '¿Tienes alguna pregunta? Llena el formulario rápido aquí o visita nuestra página de contacto para más información y ubicación.',
+        contactBtn: 'Enviar',
+        contactName: 'Nombre completo',
+        contactEmail: 'Correo',
+        
         /******************* Sección: Footer *******************/
         privacyPolicy: "Políticas de privacidad",
         reservedRights: "&copy; 2024 Kyomu Technologies. Todos los derechos reservados.",
@@ -48,6 +52,8 @@ const translations = {
         /******************* Sección: Contact us *******************/
         cuHeading: "Contáctame",
         cuIntro: "Tu aliado tecnológico, comprometido con convertir tus ideas en soluciones excepcionales con profesionalismo y excelencia.",
+
+        /******************* Página: Perfil Profesional *******************/
 
     },
     en: {
@@ -93,12 +99,20 @@ const translations = {
 
         /******************* Section: Contact *******************/
         titleContact: 'Contact',
+        contactIntro: 'Do you have any questions? Please complete the form quickly here or visit our contact page for more information and location details.',
+        contactBtn: 'Send',
+        contactName: 'Complete name',
+        contactEmail: 'Email',
 
         /******************* Section: Footer *******************/
         privacyPolicy: "Privacy Policies",
         reservedRights: "&copy; 2024 Kyomu Technologies. All rights reserved.",
 
-        /******************* Sección: Contact us *******************/
+        /* ---------------------------- ** ---------------------------- */
+
+        /******************* Page: Perfil Profesional *******************/
+
+        /******************* Page: Contact us *******************/
         cuHeading: "Get in touch",
         cuIntro: "Your trusted technology partner, dedicated to turning your ideas into exceptional solutions with professionalism and excellence.",
 

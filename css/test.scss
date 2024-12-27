@@ -1,78 +1,78 @@
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;500&display=swap');
-
-* {
+body {
   margin: 0;
   padding: 0;
+  background: url(https://picsum.photos/2500/1500?image=1041);
+  background-size: cover;
+  font-family: sans-serif;
 }
 
-body {
-  background: #282c34;
-  font-size: 2vmin;
-  font-family: JetBrains Mono, monospace;
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #e4bb68;
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 25rem;
+    padding: 2.5rem;
+    box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0.625rem;
 }
 
-.string {
-  display: flex;
-  flex-direction: column;
+.box h2 {
+  margin: 0 0 1.875rem;
+  padding: 0;
+  color: #fff;
   text-align: center;
-  animation: move 4s infinite;
 }
 
-.greeting {
+.box .inputBox {
   position: relative;
-  top: 8.6vmin;
-  animation: white-out 5s infinite;
 }
 
-.closure::after {
-  content: '';
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
   position: absolute;
-  height: 25vmin;
-  width: 40vmin;
-  background: #282c34;
-  transform: translate(-45vmin, -24.5vmin);
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: #fff;
+  pointer-events: none;
+  transition: 0.5s;
 }
 
-.closure::before {
-  content: '';
-  position: absolute;
-  height: 25vmin;
-  width: 40vmin;
-  background: #282c34;
-  transform: translate(-40vmin, 5vmin);
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #03a9f4;
+  font-size: 0.75rem;
 }
 
-.en {
-  color: #fa8231;
+.box input[type="submit"] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #03a9f4;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
 }
 
-.es {
-  color: white;
-}
-
-.de {
-  color: #c678dd;
-}
-
-.it {
-  color: #a9b0bd;
-}
-
-@keyframes move {
-  25% {
-    transform: translatey(-5.8vmin);
-    opacity: 1;
-  }
-  50% {
-    transform: translatey(-11vmin);
-  }
-  75% {
-    transform: translatey(-16.5vmin);
-  }
+.box input[type="submit"]:hover {
+  background-color: #1cb1f5;
 }

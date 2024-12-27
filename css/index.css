@@ -406,13 +406,23 @@ input:checked + .slider:before {
   background-color: #4e5d6a !important;
 }
 
-.btn-tk-ol-secondary {
+.btn-tk-ol-primary {
   border-color: #313a42 !important;
 }
 
-.btn-tk-ol-secondary:hover {
+.btn-tk-ol-primary:hover {
   background-color: #4e5d6a !important;
   border-color: #4e5d6a !important;
+  color: #F2F6FC !important;
+}
+
+.btn-tk-secondary {
+  background-color: #DEE8F7 !important;
+}
+
+.btn-tk-secondary:hover {
+  background-color: #E67575 !important;
+  border-color: #E67575 !important;
   color: #F2F6FC !important;
 }
 
@@ -585,6 +595,12 @@ footer .footer-credit {
   font-family: "Anonymous Pro", monospace !important;
 }
 
+.text-contact-us p {
+  font-size: 1rem;
+  color: #F2F6FC !important;
+  font-family: "Anonymous Pro", monospace !important;
+}
+
 .lottie-astronaut1, .lottie-astronaut2 {
   margin-top: 30%;
   height: 25rem;
@@ -623,7 +639,7 @@ footer .footer-credit {
 }
 
 .index-db {
-  height: 60vh;
+  height: 40vh;
   background: linear-gradient(rgb(22, 27, 39), rgb(78, 93, 106));
 }
 
@@ -735,6 +751,86 @@ footer .footer-credit {
 .profile-name span.fade {
   opacity: 1;
   transform: translateY(0px);
+}
+
+/****************************** Section: Contact Us ******************************/
+#form-quick-contact input::-moz-placeholder {
+  color: rgba(242, 246, 252, 0.56);
+}
+#form-quick-contact label,
+#form-quick-contact input::placeholder {
+  color: rgba(242, 246, 252, 0.56);
+}
+
+.box .inputBox {
+  position: relative;
+}
+
+.box .inputBox input {
+  width: 100%;
+  padding: 0.625rem 0;
+  font-size: 0.875rem;
+  color: #fff;
+  letter-spacing: 0.062rem;
+  margin-bottom: 1.875rem;
+  border: none;
+  border-bottom: 0.065rem solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.box .inputBox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 0.625rem 0;
+  font-size: 1rem;
+  color: rgba(242, 246, 252, 0.56);
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+  top: -1.125rem;
+  left: 0;
+  color: #E67575;
+  font-size: 0.75rem;
+}
+
+.box textarea::-moz-placeholder {
+  color: rgba(242, 246, 252, 0.56);
+}
+
+.box textarea::placeholder {
+  color: rgba(242, 246, 252, 0.56);
+}
+
+.box textarea {
+  color: #F2F6FC;
+}
+
+.box textarea:focus {
+  outline: none !important;
+  border: 1px solid rgba(222, 232, 247, 0.3);
+  box-shadow: 0 0 5px #DEE8F7;
+  color: #DEE8F7;
+}
+
+.box input[type=submit] {
+  border: none;
+  outline: none;
+  color: #fff;
+  background-color: #DB3939;
+  padding: 0.625rem 1.25rem;
+  cursor: pointer;
+  border-radius: 0.312rem;
+  font-size: 1rem;
+}
+
+.box input[type=submit]:hover {
+  background-color: #E67575;
 }
 
 /****************************** Scroll top ******************************/

@@ -183,5 +183,8 @@ window.onscroll = function() {
 //     });
 // }
 
+function goToProfile() {
+    window.open("https://kyomutech.com/projects/logicmathportfolio/", "_blank");
+}
 
 console.log(window.innerWidth);

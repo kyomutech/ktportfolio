@@ -21,6 +21,12 @@
     font-family: $font-anonymous-pro !important;
 }
 
+.text-contact-us p {
+    font-size: $px-16;
+    color: $color-palette-p-3 !important;
+    font-family: $font-anonymous-pro !important;
+}
+
 .lottie-astronaut1, .lottie-astronaut2 {   
     margin-top: 30%; 
     height: $px-400;
@@ -59,7 +65,7 @@
 }
 
 .index-db {
-    height: 60vh;
+    height: 40vh;
     background: linear-gradient( rgb(22, 27, 39), rgb(78, 93, 106) );
 }
 
@@ -188,6 +194,80 @@
 .profile-name span.fade {
     opacity: 1;
     transform: translateY(0px);
+}
+
+/****************************** Section: Contact Us ******************************/
+
+#form-quick-contact label,
+#form-quick-contact input::placeholder {
+    color: $color-palette-p-3-transp;
+}
+
+.box .inputBox {
+    position: relative;
+}
+  
+.box .inputBox input {
+    width: 100%;
+    padding: 0.625rem 0;
+    font-size: $px-14;
+    color: #fff;
+    letter-spacing: 0.062rem;
+    margin-bottom: 1.875rem;
+    border: none;
+    border-bottom: 0.065rem solid #fff;
+    outline: none;
+    background: transparent;
+}
+  
+.box .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.625rem 0;
+    font-size: 1rem;
+    color: $color-palette-p-3-transp;
+    pointer-events: none;
+    transition: 0.5s;
+}
+  
+.box .inputBox input:focus ~ label,
+.box .inputBox input:valid ~ label,
+.box .inputBox input:not([value=""]) ~ label {
+    top: -1.125rem;
+    left: 0;
+    color: $color-palette-s-2;
+    font-size: 0.75rem;
+}
+
+.box textarea::placeholder {
+    color: $color-palette-p-3-transp;
+}
+
+.box textarea {
+    color: $color-palette-p-3;
+}
+
+.box textarea:focus {
+    outline: none !important;
+    border: 1px solid $color-palette-s-3-transp;
+    box-shadow: 0 0 5px $color-palette-s-3;
+    color: $color-palette-s-3;
+}
+  
+.box input[type="submit"] {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: $color-palette-p-2;
+    padding: 0.625rem 1.25rem;
+    cursor: pointer;
+    border-radius: 0.312rem;
+    font-size: 1rem;
+}
+
+.box input[type="submit"]:hover {
+    background-color: $color-palette-s-2;
 }
 
 /****************************** Scroll top ******************************/

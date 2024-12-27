@@ -103,7 +103,6 @@
         <!-- ---------------------------------------------------------- -->
 
         <div class="pt-5 d-none"></div>
-
         <section class="pt-5 pb-5 section-profile d-none">
             <div class="container">
                 <div class="text-center">
@@ -124,7 +123,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button data-translate="valuesBtn" type="button" class="btn btn-tk-ol-secondary">Know more about me</button>
+                    <button data-translate="valuesBtn" type="button" class="btn btn-tk-ol-primary" onclick="">Know more about me</button>
                 </div>
             </div>
         </section>
@@ -140,57 +139,59 @@
                     <h2 data-translate="titleProjects" class="line-decorated-db text-uppercase">Projects</h2>
                 </div>
                 <div class="pt-5 slider-organizer"></div>
-                <div class="pt-5 slider-wrapper">
-                    <div class="card-list swiper-wrapper">
-                        <div class="card-item swiper-slide">
-                            <img src="imgs/kt_projects_logo_autospot.webp" alt="User Image" class="project-image">
-                            <!-- <h2 class="project-name">AutoSpot</h2> -->
-                            <p data-translate="projDesc1" class="project-desc">Web Application</p>
-                            <!-- <button data-translate="" class="btn btn-kt-primary go-project-btn">Visit</button> -->
-                            <div class="pt-3 text-center">
-                                <button id="autospot" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="pt-5 slider-wrapper">
+                        <div class="card-list swiper-wrapper">
+                            <div class="card-item swiper-slide">
+                                <img src="imgs/kt_projects_logo_autospot.webp" alt="User Image" class="project-image">
+                                <!-- <h2 class="project-name">AutoSpot</h2> -->
+                                <p data-translate="projDesc1" class="project-desc">Web Application</p>
+                                <!-- <button data-translate="" class="btn btn-kt-primary go-project-btn">Visit</button> -->
+                                <div class="pt-3 text-center">
+                                    <button id="autospot" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                </div>
+                            </div>
+                    
+                            <div class="card-item swiper-slide">
+                                <img src="imgs/kt_projects_logo_mrgmechanics.webp" alt="User Image" class="project-image">
+                                <!-- <h2 class="project-name">MRG Mechanics</h2> -->
+                                <p data-translate="projDesc2" class="project-desc">Web Design</p>
+                                <div class="pt-3 text-center">
+                                    <button id="mrgmechanics" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                </div>
+                            </div>
+                    
+                            <div class="card-item swiper-slide">
+                                <img src="imgs/kt_projects_logo_logic_math.webp" alt="User Image" class="project-image">
+                                <!-- <h2 class="project-name">Lógica & Mat</h2> -->
+                                <p data-translate="projDesc3" class="project-desc">Web Application</p>
+                                <div class="pt-3 text-center">
+                                    <button id="logicmathportfolio" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                </div>
+                            </div>
+                    
+                            <div class="card-item swiper-slide">
+                                <img src="imgs/kt_projects_logo_popovich.webp" alt="User Image" class="project-image">
+                                <!-- <h2 class="project-name">Popovich</h2> -->
+                                <p data-translate="projDesc4" class="project-desc">Web design</p>
+                                <div class="pt-3 text-center">
+                                    <button id="popovich" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                </div>
+                            </div>
+                    
+                            <div class="card-item swiper-slide">
+                                <img src="imgs/kt_projects_logo_ada_bayes_theorem.webp" alt="User Image" class="project-image">
+                                <!-- <h2 class="project-name">ADA</h2> -->
+                                <p data-translate="projDesc5" class="project-desc">Web Application</p>
+                                <div class="pt-3 text-center">
+                                    <button id="adabayestheorem" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                </div>
                             </div>
                         </div>
-                
-                        <div class="card-item swiper-slide">
-                            <img src="imgs/kt_projects_logo_mrgmechanics.webp" alt="User Image" class="project-image">
-                            <!-- <h2 class="project-name">MRG Mechanics</h2> -->
-                            <p data-translate="projDesc2" class="project-desc">Web Design</p>
-                            <div class="pt-3 text-center">
-                                <button id="mrgmechanics" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
-                            </div>
-                        </div>
-                
-                        <div class="card-item swiper-slide">
-                            <img src="imgs/kt_projects_logo_logic_math.webp" alt="User Image" class="project-image">
-                            <!-- <h2 class="project-name">Lógica & Mat</h2> -->
-                            <p data-translate="projDesc3" class="project-desc">Web Application</p>
-                            <div class="pt-3 text-center">
-                                <button id="logicmathportfolio" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
-                            </div>
-                        </div>
-                
-                        <div class="card-item swiper-slide">
-                            <img src="imgs/kt_projects_logo_popovich.webp" alt="User Image" class="project-image">
-                            <!-- <h2 class="project-name">Popovich</h2> -->
-                            <p data-translate="projDesc4" class="project-desc">Web design</p>
-                            <div class="pt-3 text-center">
-                                <button id="popovich" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
-                            </div>
-                        </div>
-                
-                        <div class="card-item swiper-slide">
-                            <img src="imgs/kt_projects_logo_ada_bayes_theorem.webp" alt="User Image" class="project-image">
-                            <!-- <h2 class="project-name">ADA</h2> -->
-                            <p data-translate="projDesc5" class="project-desc">Web Application</p>
-                            <div class="pt-3 text-center">
-                                <button id="adabayestheorem" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
-                            </div>
-                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
                     </div>
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-slide-button swiper-button-prev"></div>
-                    <div class="swiper-slide-button swiper-button-next"></div>
                 </div>
             </div>
         </section>
@@ -265,12 +266,12 @@
             </div>
         </section>
 
-         <!-- Sección: Contact -->
+        <!-- Sección: Contact -->
         <!-- ---------------------------------------------------------- -->
-        <!-- <section id="contact" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section> -->
+        <section id="contact" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
         <!-- ---------------------------------------------------------- -->
 
-        <!-- <div class="d-none"></div>
+        <div class="d-none"></div>
 
         <section class="index-db index-contact pt-5 d-none">
             <div class="container">
@@ -279,14 +280,66 @@
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <p class=""></p>
+                        <div class="text-contact-us d-flex align-items-center" style="height: 25vh">
+                            <p data-translate="contactIntro" class="text-center">Do you have any questions? Please complete the form quickly here or visit our contact page for more information and location details.</p>
+                        </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
+                        <!-- <form id="form-quick-contact">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="input-email" class="form-label">Name</label>
+                                        <input type="email" class="form-control bg-transparent" id="input-email" aria-describedby="emailHelp">
+                                    </div>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="mb-3">
+                                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                                        <input type="password" class="form-control bg-transparent" id="exampleInputPassword1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form> -->
 
+                        <div class="box">
+                            <form>
+                                <div class="inputBox">
+                                    <input type="text" name="name" required onkeyup="this.setAttribute('value', this.value);" value="">
+                                    <label data-translate="contactName">Complete name</label>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="inputBox">
+                                            <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
+                                            <label data-translate="contactEmail">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                        <div class="inputBox">
+                                            <input type="text" name="phone" required onkeyup="this.setAttribute('value', this.value);" value="">
+                                            <label data-translate="contactName">Phone</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <textarea class="form-control bg-transparent" id="" rows="3" placeholder="Message" style="resize: none;"></textarea>
+                                </div>
+                                <div class="pt-3 text-center">
+                                    <button data-translate="contactBtn" type="submit" class="btn btn-tk-secondary" onclick="">Send</button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section> -->
+        </section>
+        
 
         <div class="goto-top">
             <a href="#space">

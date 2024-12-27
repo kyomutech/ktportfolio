@@ -563,13 +563,24 @@ input:checked + .slider:before {
     background-color: $color-palette-s-1 !important;
 }
 
-.btn-tk-ol-secondary {
+.btn-tk-ol-primary {
     border-color: $color-palette-p-1 !important;
 }
 
-.btn-tk-ol-secondary:hover {
+.btn-tk-ol-primary:hover {
     background-color: $color-palette-s-1 !important;
     border-color: $color-palette-s-1 !important;
+    color: $color-palette-p-3 !important;
+}
+
+.btn-tk-secondary {
+    background-color: $color-palette-s-3 !important;
+    width: $px-100;
+}
+
+.btn-tk-secondary:hover {
+    background-color: $color-palette-s-2 !important;
+    border-color: $color-palette-s-2 !important;
     color: $color-palette-p-3 !important;
 }
 
