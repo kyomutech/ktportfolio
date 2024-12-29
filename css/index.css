@@ -418,6 +418,7 @@ input:checked + .slider:before {
 
 .btn-tk-secondary {
   background-color: #DEE8F7 !important;
+  width: 6.25rem;
 }
 
 .btn-tk-secondary:hover {

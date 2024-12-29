@@ -165,26 +165,17 @@ window.onscroll = function() {
     
 };
 
-//funcion scroll
-// function scrollFunctionTop() {
-//     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-//         document.getElementById("arrow-up").style.display = "block";
-//     } else {
-//         document.getElementById("arrow-up").style.display = "none";
-//     }
-// }
-
-
-// //Funcián Scrolltop (Jquery)
-// function topFunction() {
-//     $('a.scroll-top').click(function(event) {
-//         event.preventDefault();
-//         $('html, body').animate({ scrollTop: 0 });
-//     });
-// }
-
-function goToProfile() {
-    window.open("https://kyomutech.com/projects/logicmathportfolio/", "_blank");
+function goToPage(idPage){
+    console.log(idPage);
+    if (idPage === 'id-profile') {
+        window.open("https://kyomutech.com/profile.html", "_blank");
+    } else if (idPage === 'id-values') {
+        window.open("https://kyomutech.com/values.html", "_blank");
+    } else if (idPage === 'id-contact-us') {
+        window.open("https://kyomutech.com/contact-us.html", "_blank");
+    } else if (idPage === 'id-about-me') {
+        window.open("https://kyomutech.com/about-me.html", "_blank");
+    }
 }
 
 console.log(window.innerWidth);
