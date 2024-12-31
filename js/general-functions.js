@@ -222,19 +222,22 @@ export function validatePhoneNumber(quickPhoneInput, phoneErrorMsgElement) {
  * @param {*} quickFormID
  * @description Send an email notification with the filled details from the form to the Page Admin 
  */
-export function validateQuickForm(){
+export function validateQuickFormInputs(requiredErrorMsgElements) {
     var allValid = true; // Assuming all fields are valid initially
+
+    console.log('Entró a validateQuickFormInputs()');
 
     // Get all input elements
     var fields = [
-        {id: 'quick-form-name', name: 'name'},
-        {id: 'quick-form-email', name: 'email'},
-        {id: 'quick-form-msg', name: 'message'}
+        { id: 'quick-form-name', name: 'name' },
+        { id: 'quick-form-email', name: 'email' },
+        { id: 'quick-form-msg', name: 'message' }
     ];
 
-    fields.forEach(field => {
-
+    fields.forEach((field, index) => {
         var input = document.getElementById(field.id);
+        var inputValue = input?.value.trim();
+        let lang = document.documentElement.lang;
 
         // Check if the input was found
         if (!input) {
@@ -244,11 +247,30 @@ export function validateQuickForm(){
         }
 
         // Check if input value is empty
-        if (input.value.trim() === '') {
-            input.classList.add('missing-required !important');
+        if (inputValue === '') {
+            // Add appropriate class and set error message
+            if (field.id === 'quick-form-msg') {
+                input.classList.add('missing-required-textarea');
+                console.log('Added missing-required-textarea to:', input);
+            } else {
+                input.classList.add('missing-required-input');
+                console.log('Added missing-required-input to:', input);
+            }
+
+            if (requiredErrorMsgElements[index]) {
+                requiredErrorMsgElements[index].textContent =
+                    errorTranslations[lang]?.requiredErrorMsg || 'Non inveni';
+            }
+
             allValid = false;
         } else {
-            input.classList.remove('missing-required !important');
+            // Remove error class and clear error message
+            input.classList.remove('missing-required-textarea');
+            input.classList.remove('missing-required-input');
+
+            if (requiredErrorMsgElements[index]) {
+                requiredErrorMsgElements[index].textContent = '';
+            }
         }
     });
 
@@ -256,13 +278,46 @@ export function validateQuickForm(){
 }
 
 /**
+ * @name throwRequiredFieldsAlert()
+ * @description Display an alert for required fields in the correct language
+ */
+function throwRequiredFieldsAlert() {
+    let lang = document.documentElement.lang;
+
+    if (lang === 'en') {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Information',
+            text: 'Please fill out all required fields.',
+            customClass: {
+                confirmButton: 'custom-confirm-btn car-forms-btn car-actions-btn btn btn-outline-secondary'
+            }
+        });
+    } else {
+        Swal.fire({
+            icon: 'warning',
+            title: 'Información',
+            text: 'Por favor, complete todos los campos requeridos.',
+            customClass: {
+                confirmButton: 'custom-confirm-btn car-forms-btn car-actions-btn btn btn-outline-secondary'
+            }
+        });
+    }
+}
+
+/**
  * @name sendForm()
  * @description Send an email notification with the filled details from the form to the Page Admin 
  */
-export function sendForm() {
-    const name = document.getElementById('quick-form-name').value;
-    const email = document.getElementById('quick-form-email').value;
-    const message = document.getElementById('quick-form-msg').value;
+export function sendForm(requiredElement) {
+    var valid = validateQuickFormInputs(requiredElement);
+
+    if(valid) {
+        console.log('Campos completos');
+    } else {
+        console.log('campos incompletos');
+        throwRequiredFieldsAlert();
+    }
 
 
 }

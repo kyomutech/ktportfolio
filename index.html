@@ -14,7 +14,7 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
 
@@ -54,7 +54,7 @@
         </header>
 
         <!-- Section: Welcome - Autotyping -->
-        <section id="welcome" class="welcome-section visible">
+        <section id="welcome" class="welcome-section visible d-none">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-center">
                     <lottie-player src="https://lottie.host/451a4101-b03b-4d17-9313-2cfffcaa940c/xZaLdO8SPi.json" autoplay loop class="lottie-astronaut1"></lottie-player>
@@ -316,12 +316,12 @@
 
         <!-- Sección: Contact -->
         <!-- ---------------------------------------------------------- -->
-        <section id="contact" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
+        <section id="contact" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms"></section>
         <!-- ---------------------------------------------------------- -->
 
-        <div class="d-none"></div>
+        <div class=""></div>
 
-        <section class="index-db index-contact pt-5 d-none">
+        <section class="index-db index-contact pt-5">
             <div class="container">
                 <div class="text-center">
                     <h2 data-translate="titleContact" class="line-decorated-db text-uppercase">Contact</h2>
@@ -337,16 +337,18 @@
                             <form id="quick-form">
                                 <div class="inputBox">
                                     <input id="quick-form-name" type="text" name="name" required onkeyup="this.setAttribute('value', this.value);" value="">
-                                    <label data-translate="contactName">Name *</label>
-                                    <div id="emailHelp" class="form-text"></div>
+                                    <label data-translate="contactName">Name</label>
                                     <div id="quick-name-error" style="color: #E67575; font-size: smaller;"></div>
+                                    <div class="quick-form-required" style="color: #E67575; font-size: smaller;"></div>
                                 </div>
                                 <div class="row pt-3">
                                     <div class="col-sm-12 col-md-6 col-lg-6">
                                         <div class="inputBox">
                                             <input id="quick-form-email" type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
-                                            <label data-translate="contactEmail">Email *</label>
+                                            <label data-translate="contactEmail">Email</label>
                                             <div id="quick-email-error" style="color: #E67575; font-size: smaller;"></div>
+                                            <div class="quick-form-required" style="color: #E67575; font-size: smaller;"></div>
+
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-6">
@@ -358,12 +360,9 @@
                                     </div>
                                 </div>
                                 <div class="pt-3">
-                                    <textarea id="quick-form-msg" name="message" class="form-control bg-transparent" rows="3" placeholder="Message *" style="resize: none;" onkeyup="console.log(this.value);"></textarea>
-                                    <div id="emailHelp" class="form-text">Required field</div>
+                                    <textarea id="quick-form-msg" name="message" class="form-control bg-transparent" rows="3" placeholder="Message" style="resize: none;" onkeyup="console.log(this.value);"></textarea>
+                                    <div class="quick-form-required" style="color: #E67575; font-size: smaller;"></div>
                                 </div>
-                                <!-- <div class="pt-3 text-center">
-                                    <button data-translate="contactBtn" type="submit" class="btn btn-tk-secondary" onclick="">Send</button>
-                                </div> -->
                             </form>
                         </div>
                     </div>

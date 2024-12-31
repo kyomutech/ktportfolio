@@ -6,10 +6,9 @@ import * as generalFunctions from './general-functions.js'
  * @description Event Listener to initialize autoTyping
  */
 document.addEventListener('DOMContentLoaded', () => {
-    generalFunctions.autoTypeMainSection();
-    generalFunctions.generateStars();
-    setupProfileNameAnimation();
-
+    // generalFunctions.autoTypeMainSection();
+    // generalFunctions.generateStars();
+    // setupProfileNameAnimation();
 });
 
 /**
@@ -62,12 +61,14 @@ quickPhoneInput.addEventListener('blur', function() {
     generalFunctions.validatePhoneNumber(this, quickPhoneErrorMsg)
 });
 
-// /**
-//  * @type EventListener
-//  * @description Invoke sendForm function
-// */
-// const quickFormBtn = document.getElementById('quick-form-btn');
-// quickFormBtn.addEventListener('click', generalFunctions.sendForm);
+/****************************** Block: Send form ******************************/
+/**
+ * @type EventListener
+ * @description Invoke sendForm function
+*/
+const quickFormBtn = document.getElementById('quick-form-btn');
+const requiredErrorMsg = document.querySelectorAll('.quick-form-required');
+quickFormBtn.addEventListener('click', () => generalFunctions.sendForm(requiredErrorMsg));
 
 /******************* UNUSED CODE *******************/
 
