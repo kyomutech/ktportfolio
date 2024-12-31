@@ -170,7 +170,10 @@ export function validateEmail(quickEmailInput, emailErrorMsgElement) {
     const email = quickEmailInput.value.trim();
     let lang = document.documentElement.lang;
     console.log(email);
-    if (!validateEmailFormat(email)) {
+    
+    if (email === '') {
+        emailErrorMsgElement.textContent = '';
+    } else if (!validateEmailFormat(email)) {
         emailErrorMsgElement.textContent = errorTranslations[lang]?.emailErrorMsg || 'Non inveni';
         emailErrorMsgElement.style.display = 'block';
     } else {
