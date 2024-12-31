@@ -67,6 +67,9 @@ const translations = {
 
         /******************* Página: Perfil Profesional *******************/
 
+        /******************* Mensajes de error *******************/
+        phoneNumberError: 'Número debe ser de 8 dígitos.',
+
     },
     en: {
         /******************* Section: Navbar *******************/
@@ -139,6 +142,10 @@ const translations = {
         /******************* Page: Contact us *******************/
         cuHeading: 'Get in touch',
         cuIntro: 'Your trusted technology partner, dedicated to turning your ideas into exceptional solutions with professionalism and excellence.',
+
+
+        /******************* Error Messages *******************/
+        phoneNumberError: 'Number must be of 8 digits',
 
     },
 }

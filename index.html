@@ -54,7 +54,7 @@
         </header>
 
         <!-- Section: Welcome - Autotyping -->
-        <section id="welcome" class="welcome-section visible">
+        <section id="welcome" class="welcome-section visible d-none">
             <div class="container">
                 <div class="d-flex align-items-center justify-content-center">
                     <lottie-player src="https://lottie.host/451a4101-b03b-4d17-9313-2cfffcaa940c/xZaLdO8SPi.json" autoplay loop class="lottie-astronaut1"></lottie-player>
@@ -122,7 +122,7 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <button data-translate="valuesBtn" type="button" id="id-profile" class="btn btn-tk-ol-primary" onclick="goToPage(this.id)">Know more about me</button>
+                    <button data-translate="valuesBtn" type="button" id="id-profile" class="btn btn-tk-ol-primary go-to-pages">Know more about me</button>
                 </div>
             </div>
         </section>
@@ -147,7 +147,7 @@
                                 <p data-translate="projDesc1" class="project-desc">Web Application</p>
                                 <!-- <button data-translate="" class="btn btn-kt-primary go-project-btn">Visit</button> -->
                                 <div class="pt-3 text-center">
-                                    <button id="autospot" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                    <button id="autospot" data-translate="projBtn" type="button" class="btn btn-kt-primary go-to-project">Visit project</button>
                                 </div>
                             </div>
                     
@@ -156,7 +156,7 @@
                                 <!-- <h2 class="project-name">MRG Mechanics</h2> -->
                                 <p data-translate="projDesc2" class="project-desc">Web Design</p>
                                 <div class="pt-3 text-center">
-                                    <button id="mrgmechanics" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                    <button id="mrgmechanics" data-translate="projBtn" type="button" class="btn btn-kt-primary go-to-project">Visit project</button>
                                 </div>
                             </div>
                     
@@ -165,7 +165,7 @@
                                 <!-- <h2 class="project-name">Lógica & Mat</h2> -->
                                 <p data-translate="projDesc3" class="project-desc">Web Application</p>
                                 <div class="pt-3 text-center">
-                                    <button id="logicmathportfolio" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                    <button id="logicmathportfolio" data-translate="projBtn" type="button" class="btn btn-kt-primary go-to-project">Visit project</button>
                                 </div>
                             </div>
                     
@@ -174,7 +174,7 @@
                                 <!-- <h2 class="project-name">Popovich</h2> -->
                                 <p data-translate="projDesc4" class="project-desc">Web design</p>
                                 <div class="pt-3 text-center">
-                                    <button id="popovich" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                    <button id="popovich" data-translate="projBtn" type="button" class="btn btn-kt-primary go-to-project">Visit project</button>
                                 </div>
                             </div>
                     
@@ -183,7 +183,7 @@
                                 <!-- <h2 class="project-name">ADA</h2> -->
                                 <p data-translate="projDesc5" class="project-desc">Web Application</p>
                                 <div class="pt-3 text-center">
-                                    <button id="adabayestheorem" data-translate="projBtn" type="button" class="btn btn-kt-primary" onclick="sendToProject(this.id)">Visit project</button>
+                                    <button id="adabayestheorem" data-translate="projBtn" type="button" class="btn btn-kt-primary go-to-project">Visit project</button>
                                 </div>
                             </div>
                         </div>
@@ -237,14 +237,14 @@
             </div>
 
             <div class="pt-3 text-center">
-                <button data-translate="AboutMeBtn" type="button" id="id-about-me" class="btn btn-kt-primary" onclick="goToPage(this.id)">Explore more</button>
+                <button data-translate="AboutMeBtn" type="button" id="id-about-me" class="btn btn-kt-primary go-to-pages">Explore more</button>
             </div>
         </section>
 
         <!-- Sección: Values -->
         <!-- ---------------------------------------------------------- -->
         <section id="values" class="d-none">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 100" fill="#4e5d6a">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 50" fill="#4e5d6a">
                 <path transform="scale(-1, 1) translate(-1000, 0)" d="M0 0v50S500 4 1000 4V0H0Z"></path>
             </svg>
         </section>
@@ -310,18 +310,18 @@
             <p data-translate="valuesClose" class="pt-5 text-center">Explore how these values define my professional vision and my commitment to excellence.</p>
 
             <div class="pt-3 text-center">
-                <button data-translate="valuesBtn" type="button" id="id-values" class="btn btn-kt-primary" onclick="goToPage(this.id)">Explore more</button>
+                <button data-translate="valuesBtn" type="button" id="id-values" class="btn btn-kt-primary go-to-pages">Explore more</button>
             </div>
         </section>
 
         <!-- Sección: Contact -->
         <!-- ---------------------------------------------------------- -->
-        <section id="contact" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
+        <section id="contact" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms"></section>
         <!-- ---------------------------------------------------------- -->
 
-        <div class="d-none"></div>
+        <div class=""></div>
 
-        <section class="index-db index-contact pt-5 d-none">
+        <section class="index-db index-contact pt-5">
             <div class="container">
                 <div class="text-center">
                     <h2 data-translate="titleContact" class="line-decorated-db text-uppercase">Contact</h2>
@@ -334,27 +334,32 @@
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
                         <div class="box">
-                            <form>
+                            <form id="quick-form">
                                 <div class="inputBox">
-                                    <input type="text" name="name" required onkeyup="this.setAttribute('value', this.value);" value="">
-                                    <label data-translate="contactName">Name</label>
+                                    <input id="quick-form-name" type="text" name="name" required onkeyup="this.setAttribute('value', this.value);" value="">
+                                    <label data-translate="contactName">Name *</label>
+                                    <div id="emailHelp" class="form-text"></div>
+                                    <div id="quick-name-error" style="color: #E67575; font-size: smaller;"></div>
                                 </div>
-                                <div class="row">
+                                <div class="row pt-3">
                                     <div class="col-sm-12 col-md-6 col-lg-6">
                                         <div class="inputBox">
-                                            <input type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
-                                            <label data-translate="contactEmail">Email</label>
+                                            <input id="quick-form-email" type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
+                                            <label data-translate="contactEmail">Email *</label>
+                                            <div id="quick-email-error" style="color: #E67575; font-size: smaller;"></div>
                                         </div>
                                     </div>
                                     <div class="col-sm-12 col-md-6 col-lg-6">
                                         <div class="inputBox">
-                                            <input type="text" name="phone" required onkeyup="this.setAttribute('value', this.value);" value="">
+                                            <input id="quick-form-phone" type="tel" maxlength="9" minlength="9" name="phone" required onkeyup="this.setAttribute('value', this.value);" value="">
                                             <label data-translate="contactPhone">Phone</label>
+                                            <div id="quick-phone-error" style="color: #E67575; font-size: smaller;"></div>
                                         </div>
                                     </div>
                                 </div>
-                                <div>
-                                    <textarea class="form-control bg-transparent" id="" rows="3" placeholder="Message" style="resize: none;"></textarea>
+                                <div class="pt-3">
+                                    <textarea id="quick-form-msg" name="message" class="form-control bg-transparent" rows="3" placeholder="Message *" style="resize: none;" onkeyup="console.log(this.value);"></textarea>
+                                    <div id="emailHelp" class="form-text">Required field</div>
                                 </div>
                                 <!-- <div class="pt-3 text-center">
                                     <button data-translate="contactBtn" type="submit" class="btn btn-tk-secondary" onclick="">Send</button>
@@ -366,13 +371,13 @@
                 
                 <div class="row pb-5">
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="pt-3 text-center">
-                            <button data-translate="contactMore" type="button" id="id-contact-us" class="btn btn-tk-secondary" onclick="goToPage(this.id)">More</button>
+                        <div class="pt-1 text-center">
+                            <button data-translate="contactMore" type="button" id="id-contact-us" class="btn btn-tk-secondary go-to-pages">More</button>
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="pt-3 text-center">
-                            <button data-translate="contactSend" type="submit" class="btn btn-tk-secondary" onclick="">Send</button>
+                        <div class="pt-1 text-center">
+                            <button id="quick-form-btn" data-translate="contactSend" type="button" class="btn btn-tk-secondary">Send</button>
                         </div>
                     </div>
                 </div>
@@ -410,9 +415,8 @@
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
         <script src="js/AutoTyping.min.js"></script>
+        <script src="js/general-tasks.js"></script>
+        <script type="module" src="js/main-index.js"></script>
         <script src="js/three.min.js"></script>
-        <script src="js/index.js"></script>
-        <script src="js/general.js"></script>
-
     </body>
 </html>

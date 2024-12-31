@@ -213,7 +213,7 @@
     font-size: $px-14;
     color: #fff;
     letter-spacing: 0.062rem;
-    margin-bottom: 1.875rem;
+    // margin-top: 1.875rem;
     border: none;
     border-bottom: 0.065rem solid #fff;
     outline: none;
@@ -268,6 +268,10 @@
 
 .box input[type="submit"]:hover {
     background-color: $color-palette-s-2;
+}
+
+.missing-required {
+    border-bottom: $px-2 solid #DB3939;
 }
 
 /****************************** Scroll top ******************************/

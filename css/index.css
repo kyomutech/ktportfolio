@@ -773,7 +773,6 @@ footer .footer-credit {
   font-size: 0.875rem;
   color: #fff;
   letter-spacing: 0.062rem;
-  margin-bottom: 1.875rem;
   border: none;
   border-bottom: 0.065rem solid #fff;
   outline: none;
@@ -832,6 +831,10 @@ footer .footer-credit {
 
 .box input[type=submit]:hover {
   background-color: #E67575;
+}
+
+.missing-required {
+  border-bottom: 0.125rem solid #DB3939;
 }
 
 /****************************** Scroll top ******************************/

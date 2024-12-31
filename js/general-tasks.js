@@ -1,18 +1,18 @@
 'use strict';
 //Menu
-let headerContenedor = document.getElementById('header');
-let botonActivador = document.getElementById('btn-main-menu');
+let headerContainer = document.getElementById('header');
+let triggerButton = document.getElementById('btn-main-menu');
 
-botonActivador.addEventListener('click', () => {
-    headerContenedor.classList.toggle('active');
+triggerButton.addEventListener('click', () => {
+    headerContainer.classList.toggle('active');
 });
 
 //Header con clase fixed
-window.onscroll = function() { funcionScroll() };
+window.onscroll = function() { scrollFunction() };
 let header = document.getElementById('header');
 let headerFixed = header.offsetTop;
 
-const funcionScroll = () => {
+const scrollFunction = () => {
     if (window.pageYOffset > headerFixed) {
         header.classList.add('fixed');
     } else {
@@ -51,3 +51,12 @@ const swiper = new Swiper('.slider-wrapper', {
         }
     }
 });
+
+// ScrollTop button disappears when loading web page
+// document.getElementById("arrow-up").style.display = "none";
+
+// Hide ScrollTop button (Top)
+// window.onscroll = function() {
+//     scrollFunctionTop()
+    
+// };
