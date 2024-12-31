@@ -44,11 +44,11 @@ export function autoTypeMainSection() {
         id: 'auto-typing1',
         typeText: ['Welcome to Kyomu Tecknologies'],
         textColor: "#DB3939",
-        typeSpeed: 150,
+        typeSpeed: 100,
         cursorColor: "#DB3939",
-        deleteSpeed: 75,
+        deleteSpeed: 100,
         waitBeforeDelete: 0,
-        deleteDelay: 5000,
+        deleteDelay: 1000,
         waitBetweenTexts: 1000,
         typeInfinity: false,
         textDeleteOptions: { 
@@ -66,8 +66,8 @@ export function autoTypeMainSection() {
         typeSpeed: 150,
         cursorColor: "#313A42",
         deleteSpeed: 75,
-        waitBeforeDelete: 0,
-        deleteDelay: 10000,
+        waitBeforeDelete: 1,
+        deleteDelay: 5000,
         waitBetweenTexts: 1000,
         typeInfinity: false
     }).init();
@@ -75,7 +75,7 @@ export function autoTypeMainSection() {
     // Wait until typing is complete, then transition sections
     setTimeout(function () {
         handleTransition(); // Call the new function for the transition
-    }, 15000); // This should match the total duration of typing and delay before deleting text
+    }, 7000); // This should match the total duration of typing and delay before deleting text
 }
 
 /**

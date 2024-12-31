@@ -6,9 +6,9 @@ import * as generalFunctions from './general-functions.js'
  * @description Event Listener to initialize autoTyping
  */
 document.addEventListener('DOMContentLoaded', () => {
-    // generalFunctions.autoTypeMainSection();
-    // generalFunctions.generateStars();
-    // setupProfileNameAnimation();
+    generalFunctions.autoTypeMainSection();
+    generalFunctions.generateStars();
+    setupProfileNameAnimation();
 });
 
 /**
