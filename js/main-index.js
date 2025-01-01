@@ -68,7 +68,7 @@ quickPhoneInput.addEventListener('blur', function() {
 */
 const quickFormBtn = document.getElementById('quick-form-btn');
 const requiredErrorMsg = document.querySelectorAll('.quick-form-required');
-quickFormBtn.addEventListener('click', () => generalFunctions.sendForm(requiredErrorMsg));
+quickFormBtn.addEventListener('click', () => generalFunctions.sendQuickForm(requiredErrorMsg));
 
 /******************* UNUSED CODE *******************/
 

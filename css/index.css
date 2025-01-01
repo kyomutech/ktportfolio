@@ -844,4 +844,10 @@ footer .footer-credit {
   right: 1.25rem;
   width: 3.125rem;
   height: 3.125rem;
+}
+
+/****************************** Sweet Alert ******************************/
+.quick-form-alert-title {
+  font-family: "Anonymous Pro", monospace;
+  color: #DB3939;
 }/*# sourceMappingURL=index.css.map */

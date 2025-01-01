@@ -15,7 +15,7 @@ const translations = {
         spaceDiscover: 'Descubre mi pasión por el desarrollo web y de software a través de soluciones creativas',
 
         /******************* Sección: Perfil *******************/
-        profileHeading: 'Perfil Profesional',
+        profileHeading: 'Perfil',
         profilePosition: 'Desarrollador de Software & Web',
         profileIntro: 'Explora mi perfil profesional completo de habilidades y tecnologías para conocer más sobre mi experiencia como desarrollador.',
 
@@ -89,7 +89,7 @@ const translations = {
         spaceDiscover: 'Discover my passion for web and software development through creative solutions',
 
         /******************* Section: Profile *******************/
-        profileHeading: 'Professional Profile',
+        profileHeading: 'Profile',
         profilePosition: 'Software & Web Developer',
         profileIntro: 'Explore my full professional profile skills and technologies to learn more about my expertise as a developer.',
 

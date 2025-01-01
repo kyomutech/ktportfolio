@@ -66,7 +66,7 @@ export function autoTypeMainSection() {
         typeSpeed: 150,
         cursorColor: "#313A42",
         deleteSpeed: 75,
-        waitBeforeDelete: 1,
+        waitBeforeDelete: 0,
         deleteDelay: 5000,
         waitBetweenTexts: 1000,
         typeInfinity: false
@@ -309,15 +309,111 @@ function throwRequiredFieldsAlert() {
  * @name sendForm()
  * @description Send an email notification with the filled details from the form to the Page Admin 
  */
-export function sendForm(requiredElement) {
+export function sendQuickForm(requiredElement) {
     var valid = validateQuickFormInputs(requiredElement);
+    var lang = document.documentElement.lang;
 
     if(valid) {
         console.log('Campos completos');
+        
+        var inputName = document.getElementById('quick-form-name').value;
+        var inputEmail = document.getElementById('quick-form-email').value;
+        var inputPhone = document.getElementById('quick-form-phone').value;
+        var inputMessage = document.getElementById('quick-form-msg').value;
+
+        var newQuickForm = {
+            name: inputName,
+            email: inputEmail,
+            phone: inputPhone,
+            message: inputMessage
+        }
+
+        emailjs.send('service_qlwyuic', 'kt_quick_form_template', newQuickForm, 'W-euMbKlZiYGOZLL5').then(function(response) {
+            if (lang === 'en') {
+                Swal.fire({
+                    icon: 'success',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    title: 'Kyomu Technologies',
+                    html: 'Thank you for contacting us.<br>Your message has been successfully sent.<br>We will review it and contact you as soon as possible.',
+                    didOpen: () => {
+                        Swal.getIcon().style.webkitAnimation = 'rotate 2s linear infinite';
+                        Swal.getIcon().style.animation = 'rotate 2s linear infinite';
+                    },
+                    customClass: {
+                        title: 'quick-form-alert-title'
+                    }
+                });
+                cleanQuickFormInputs();
+            } else {
+                Swal.fire({
+                    icon: 'success',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    title: 'Kyomu Technologies',
+                    html: 'Gracias por contactarnos.<br>Su mensaje ha sido enviado exitosamente.<br>Lo revisaremos y nos comunicaremos con usted lo antes posible.',
+                    didOpen: () => {
+                        Swal.getIcon().style.webkitAnimation = 'rotate 2s linear infinite';
+                        Swal.getIcon().style.animation = 'rotate 2s linear infinite';
+                    },
+                    customClass: {
+                        title: 'quick-form-alert-title'
+                    }
+                });
+                cleanQuickFormInputs(inputName, inputEmail, inputPhone, inputMessage);
+            }
+        });
+        emailjs.send('service_qlwyuic', 'template_k6vbsw9', newQuickForm, 'W-euMbKlZiYGOZLL5')
+            .then(function(response) {
+                console.log('Email sent successfully:', response);
+                if (lang === 'en') {
+                    Swal.fire({
+                        icon: 'success',
+                        showConfirmButton: false,
+                        timer: 5000,
+                        title: 'Kyomu Technologies',
+                        html: '<br>Your message has been successfully sent.<br>We will be in contact shortly.<br>Thank you!',
+                        didOpen: () => {
+                            Swal.getIcon().style.webkitAnimation = 'rotate 2s linear infinite';
+                            Swal.getIcon().style.animation = 'rotate 2s linear infinite';
+                        },
+                        customClass: {
+                            title: 'quick-form-alert-title'
+                        }
+                    });
+                    cleanQuickFormInputs();
+                } else {
+                    Swal.fire({
+                        icon: 'success',
+                        showConfirmButton: false,
+                        timer: 5000,
+                        title: 'Kyomu Technologies',
+                        html: '<br>Su mensaje ha sido enviado con éxito.<br>Nos pondremos en contacto con usted en breve.<br>¡Gracias!',
+                        didOpen: () => {
+                            Swal.getIcon().style.webkitAnimation = 'rotate 2s linear infinite';
+                            Swal.getIcon().style.animation = 'rotate 2s linear infinite';
+                        },
+                        customClass: {
+                            title: 'quick-form-alert-title'
+                        }
+                    });
+                    cleanQuickFormInputs(inputName, inputEmail, inputPhone, inputMessage);
+                }
+            })
+            .catch(function(error) {
+                console.error('Failed to send email:', error);
+                // Handle the error appropriately (e.g., show a user alert)
+            });
+
     } else {
         console.log('campos incompletos');
         throwRequiredFieldsAlert();
     }
+}
 
-
+function cleanQuickFormInputs(){
+    document.getElementById('quick-form-name').value = '';
+    document.getElementById('quick-form-email').value = '';
+    document.getElementById('quick-form-phone').value = '';
+    document.getElementById('quick-form-msg').value = '';
 }
