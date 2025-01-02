@@ -66,6 +66,14 @@
         width: $px-100;
     }
 
+    .index-db .container.swiper {
+        padding-top: $rem-2;
+    }
+
+    .index-db {
+        height: 50vh;
+    }
+
     .card-item .project-name, 
     .card-item .project-desc {
         display: none !important;
@@ -86,11 +94,11 @@
     }
 
     .swiper-button-prev {
-        left: 5%; // Adjust the left positioning of the prev button
+        left: 8% !important; // Adjust the left positioning of the prev button
     }
 
     .swiper-button-next {
-        right: 5%; // Adjust the right positioning of the next button
+        right: 8% !important; // Adjust the right positioning of the next button
     }
 
     .swiper-pagination {
@@ -104,16 +112,16 @@
     .container .profile-row {
         flex-direction: column; /* Stack the columns vertically */
         height: 35vh !important;
-      }
+    }
     
-      .border-right {
+    .border-right {
         border-right: none; /* Remove the division line */
-      }
+    }
     
-      .col-md-5 {
+    .col-md-5 {
         width: 100%; /* Make both columns take full width */
         margin-bottom: 20px; /* Add some space between the two sections */
-      }
+    }
     
 }
 

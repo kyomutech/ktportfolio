@@ -635,6 +635,12 @@ footer .footer-credit {
     height: 6.25rem;
     width: 6.25rem;
   }
+  .index-db .container.swiper {
+    padding-top: 32px;
+  }
+  .index-db {
+    height: 50vh;
+  }
   .card-item .project-name,
   .card-item .project-desc {
     display: none !important;
@@ -652,10 +658,10 @@ footer .footer-credit {
     z-index: 10;
   }
   .swiper-button-prev {
-    left: 5%;
+    left: 8% !important;
   }
   .swiper-button-next {
-    right: 5%;
+    right: 8% !important;
   }
   .swiper-pagination {
     bottom: 10px;

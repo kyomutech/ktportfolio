@@ -41,13 +41,16 @@ const swiper = new Swiper('.slider-wrapper', {
     // Responsive breakpoints
     breakpoints: {
         0: {
-        slidesPerView: 1
+            slidesPerView: 1 // Display one slide at a time for small screens
+        },
+        576: {
+            slidesPerView: 2 // Display two slides for slightly larger screens
         },
         768: {
-        slidesPerView: 2
+            slidesPerView: 2
         },
         1024: {
-        slidesPerView: 3
+            slidesPerView: 3
         }
     }
 });
