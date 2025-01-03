@@ -30,9 +30,14 @@ body {
 }
 
 /****************************** Global styles ******************************/
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: "Playfair Display", serif;
   color: #4e5d6a !important;
+}
+
+h4 {
+  font-family: "Playfair Display", serif;
+  color: #313a42 !important;
 }
 
 p {
@@ -611,6 +616,9 @@ footer .footer-credit {
     padding: 9px 0px;
     transition: all 0.5s ease 0s;
   }
+  p {
+    font-size: 0.938rem;
+  }
   .lottie-astronaut1,
   .lottie-astronaut2 {
     display: flex;
@@ -629,14 +637,10 @@ footer .footer-credit {
   .text-space div p {
     color: #F2F6FC;
     font-family: "Anonymous Pro", monospace;
-    font-size: 0.938rem;
   }
   .lottie-down-arrow {
     height: 6.25rem;
     width: 6.25rem;
-  }
-  .index-db .container.swiper {
-    padding-top: 32px;
   }
   .index-db {
     height: 50vh;
@@ -669,16 +673,26 @@ footer .footer-credit {
   .slider-organizer {
     display: none !important;
   }
-  .container .profile-row {
-    flex-direction: column; /* Stack the columns vertically */
-    height: 35vh !important;
-  }
   .border-right {
     border-right: none; /* Remove the division line */
   }
-  .col-md-5 {
-    width: 100%; /* Make both columns take full width */
-    margin-bottom: 20px; /* Add some space between the two sections */
+  .index-db-contact {
+    height: 90vh;
+  }
+  .cu-buttons div#cu-btn,
+  .cu-buttons div#qf-btn {
+    padding-top: 16px !important;
+  }
+  .box,
+  .t-values {
+    padding-top: 48px;
+  }
+  .about-me-btn {
+    padding-top: 80px !important;
+  }
+  .go-top-arrow {
+    width: 1.875rem;
+    height: 1.875rem;
   }
 }
 /* Small devices (landscape phones, 576px and up) */

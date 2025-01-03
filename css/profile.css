@@ -30,9 +30,14 @@ body {
 }
 
 /****************************** Global styles ******************************/
-h1, h2, h3, h4 {
+h1, h2, h3 {
   font-family: "Playfair Display", serif;
   color: #4e5d6a !important;
+}
+
+h4 {
+  font-family: "Playfair Display", serif;
+  color: #313a42 !important;
 }
 
 p {

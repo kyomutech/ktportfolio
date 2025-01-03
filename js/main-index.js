@@ -8,8 +8,13 @@ import * as generalFunctions from './general-functions.js'
 document.addEventListener('DOMContentLoaded', () => {
     generalFunctions.autoTypeMainSection();
     generalFunctions.generateStars();
-    setupProfileNameAnimation();
+    
 });
+
+document.getElementById("go-top-btn").style.display = "none";
+window.onscroll = function() {
+    generalFunctions.scrollFunctionTop()
+};
 
 /**
  * @type EventListener
@@ -70,41 +75,6 @@ const quickFormBtn = document.getElementById('quick-form-btn');
 const requiredErrorMsg = document.querySelectorAll('.quick-form-required');
 quickFormBtn.addEventListener('click', () => generalFunctions.sendQuickForm(requiredErrorMsg));
 
+
+
 /******************* UNUSED CODE *******************/
-
-// function setupProfileNameAnimation() {
-//     console.log(this)
-//     const text = document.querySelector(".profile-name");
-//     const parent = text.parentElement; // Assuming parent has the d-none class
-
-//     // Observer to detect when 'd-none' is removed
-//     const observer = new MutationObserver(() => {
-//         if (!parent.classList.contains("d-none")) {
-//             startAnimation(text); // Trigger the animation
-//             observer.disconnect(); // Stop observing
-//         }
-//     });
-
-//     // Start observing the parent for attribute changes
-//     observer.observe(parent, { attributes: true });
-// }
-
-// function startAnimation(element) {
-//     const strText = element.textContent;
-//     const splitText = strText.split("");
-//     element.textContent = ""; // Clear existing content
-
-//     for (let i = 0; i < splitText.length; i++) {
-//         element.innerHTML += `<span>${splitText[i]}</span>`;
-//     }
-
-//     let char = 0;
-//     const timer = setInterval(() => {
-//         const span = element.querySelectorAll("span")[char];
-//         span.classList.add("fade");
-//         char++;
-//         if (char === splitText.length) {
-//             clearInterval(timer);
-//         }
-//     }, 50);
-// }

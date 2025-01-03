@@ -411,9 +411,26 @@ export function sendQuickForm(requiredElement) {
     }
 }
 
+/**
+ * @name cleanQuickFormInputs()
+ * @description Removes any content that quick form has
+ */
 function cleanQuickFormInputs(){
     document.getElementById('quick-form-name').value = '';
     document.getElementById('quick-form-email').value = '';
     document.getElementById('quick-form-phone').value = '';
     document.getElementById('quick-form-msg').value = '';
+}
+
+/****************************** Go Top Arrow ******************************/
+/**
+ * @name scrollFunctionTop()
+ * @description Hides go-top-arrow button
+ */
+export function scrollFunctionTop() {
+    if (document.body.scrollTop > 280 || document.documentElement.scrollTop > 280) {
+        document.getElementById("go-top-btn").style.display = "block";
+    } else {
+        document.getElementById("go-top-btn").style.display = "none";
+    }
 }

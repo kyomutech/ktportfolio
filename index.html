@@ -16,6 +16,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
+    
     <body>
 
         <header id="header">
@@ -97,8 +98,7 @@
         <section id="" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
         <!-- ---------------------------------------------------------- -->
 
-        <div class="pt-5 d-none"></div>
-        <section class="pt-5 pb-5 section-profile d-none">
+        <!-- <section class="pt-5 pb-5 section-profile d-none">
             <div class="container">
                 <div class="text-center">
                     <h2 data-translate="profileHeading" class="line-decorated-lb text-uppercase">Profile</h2>
@@ -106,18 +106,42 @@
             </div>
             <div class="container">
                 <div class="row profile-row justify-content-center align-items-center" style="height: 40vh;">
-                    <!-- First Column (Title) with right border -->
-                    <div class="col-md-5 d-flex flex-column align-items-center justify-content-center border-right">
-                        <h3 class="text-center text-uppercase profile-name mb-3">Roberto Rojas Jiménez</h3>
-                        <h4 data-translate="profilePosition" class="pt-3 text-center">Software & Web Developer</h4>
+                    <div class="col-sm-12 col-md-6 col-lg-6 d-flex align-items-center justify-content-center border-right">
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <h3 class="text-center text-uppercase profile-name mb-3">Roberto Rojas Jiménez</h3>
+                            </div>
+                            <div class="col-sm-12 col-md-12 col-lg-12">
+                                <h4 data-translate="profilePosition" class="pt-3 text-center">Software & Web Developer</h4>
+                            </div>
+                        </div>
                     </div>
-                    
-                    <!-- Second Column (Paragraph) -->
-                    <div class="col-md-5 d-flex align-items-center justify-content-center border-left">
+                    <div class="col-12 d-flex align-items-center justify-content-center border-left">
                         <p data-translate="profileIntro" class="animated-paragraph text-center animate__animated animate__fadeInDown animate__delay-5000ms">Explore my full professional profile skills and technologies to learn more about my expertise as a developer.</p>
                     </div>
                 </div>
+                <div class="pt-5 text-center">
+                    <button data-translate="valuesBtn" type="button" id="id-profile" class="btn btn-tk-ol-primary go-to-pages">Know more about me</button>
+                </div>
+            </div>
+        </section> -->
+
+        <section class="pt-5 pb-5 section-profile d-none">
+            <div class="container">
                 <div class="text-center">
+                    <h2 data-translate="profileHeading" class="line-decorated-lb text-uppercase">Profile</h2>
+                </div>
+                <div class="text-center pt-4">
+                    <p data-translate="profileIntro" class="animated-paragraph animate__animated animate__fadeInDown animate__delay-5000ms">
+                        Explore my full professional profile, skills, and technologies to learn more about my expertise as a developer.
+                    </p>
+                </div>
+                
+                <div class="pt-5 text-center">
+                    <h3 class="text-uppercase profile-name mb-1">Roberto Rojas Jiménez</h3>
+                    <p data-translate="profilePosition" class="index-subtitles">Software & Web Developer</p>
+                </div>
+                <div class="pt-5 text-center">
                     <button data-translate="valuesBtn" type="button" id="id-profile" class="btn btn-tk-ol-primary go-to-pages">Know more about me</button>
                 </div>
             </div>
@@ -128,7 +152,7 @@
         <section id="projects" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
         <!-- ---------------------------------------------------------- -->
 
-        <section class="index-db d-none">
+        <section class="pt-5 pb-5 index-db d-none">
             <div class="container swiper">
                 <div class="container">
                     <div class="text-center">
@@ -198,7 +222,7 @@
         <section id="about-me" class="separator-line animate__animated animate__slideInRight animate__delay-2000ms d-none"></section>
         <!-- ---------------------------------------------------------- -->
 
-        <div class="pt-5 d-none"></div>
+        <!-- <div class="pt-5 d-none"></div> -->
 
         <section class="pt-5 pb-5 d-none">
             <div class="container">
@@ -210,33 +234,31 @@
                     <p data-translate="aboutMeIntro" class="text-center">Take a look at what drives my journey as a developer—a strong passion for innovation, a focus on building meaningful digital experiences, and a natural curiosity that keeps me striving for impactful solutions.</p>
                 </div>
 
-                <div class="row profile-row justify-content-center align-items-center" style="height: 20vh;">
+                <div class="row justify-content-center align-items-center" style="height: 20vh;">
                     <!-- 1st Column - Name -->
+                    <div class="pt-2"></div>
                     <div class="col-sm-12 col-md-3 border-right d-flex flex-column justify-content-center align-items-center">
-                        <h3 class="text-center text-uppercase profile-name mb-3">Roberto Rojas</h3>
-                        <p data-translate="aboutMePersonalText">Creative and passionate professional.</p>
+                        <h3 class="text-center text-uppercase profile-name mb-1">Roberto Rojas</h3>
+                        <p data-translate="aboutMePersonalText" class="index-subtitles">Creative and passionate professional.</p>
                     </div>
 
                     <!-- 2nd Column - Mission -->
-                    
                     <div class="col-sm-12 col-md-3 border-right border-left d-flex flex-column justify-content-center align-items-center">
-                        <h3 data-translate="aboutMeMission" class="text-uppercase profile-name mb-3">Mission</h3>
-                        <p data-translate="aboutMeMissionText" class="">Deliver excellence and innovation.</p>
+                        <h3 data-translate="aboutMeMission" class="text-uppercase profile-name mb-1">Mission</h3>
+                        <p data-translate="aboutMeMissionText" class="index-subtitles">Deliver excellence and innovation.</p>
                     </div>
-                    
-                    
-                    
                     <!-- 3rd Column - Vision -->
                     <div class="col-sm-12 col-md-3 border-left d-flex flex-column justify-content-center align-items-center">
-                        <h3 data-translate="aboutMeVision" class="text-center text-uppercase profile-name mb-3">Vision</h3>
-                        <p data-translate="aboutMeVisionText">Inspire growth and success.</p>
+                        <h3 data-translate="aboutMeVision" class="text-center text-uppercase profile-name mb-1">Vision</h3>
+                        <p data-translate="aboutMeVisionText" class="index-subtitles">Inspire growth and success.</p>
                     </div>
+                </div>
+                <div class="about-me-btn"></div>
+                <div class="pt-5 text-center">
+                    <button data-translate="AboutMeBtn" type="button" id="id-about-me" class="btn btn-kt-primary go-to-pages">Explore more</button>
                 </div>
             </div>
 
-            <div class="pt-3 text-center">
-                <button data-translate="AboutMeBtn" type="button" id="id-about-me" class="btn btn-kt-primary go-to-pages">Explore more</button>
-            </div>
         </section>
 
         <!-- Sección: Values -->
@@ -252,7 +274,7 @@
         <section class="pb-5 d-none">
             <div class="container">
                 <div class="text-center">
-                    <h2 data-translate="titleValues" class="line-decorated-lb text-uppercase">Values</h2>
+                    <h2 data-translate="titleValues" class="t-values line-decorated-lb text-uppercase">Values</h2>
                 </div>
 
                 <div class="pt-3">
@@ -303,13 +325,13 @@
                         </div>
                     </div>
                 </div>
+                <p data-translate="valuesClose" class="pt-5 text-center">Explore how these values define my professional vision and my commitment to excellence.</p>
+                <div class="pt-3 text-center">
+                    <button data-translate="valuesBtn" type="button" id="id-values" class="btn btn-kt-primary go-to-pages">Explore more</button>
+                </div>
             </div>
 
-            <p data-translate="valuesClose" class="pt-5 text-center">Explore how these values define my professional vision and my commitment to excellence.</p>
 
-            <div class="pt-3 text-center">
-                <button data-translate="valuesBtn" type="button" id="id-values" class="btn btn-kt-primary go-to-pages">Explore more</button>
-            </div>
         </section>
 
         <!-- Sección: Contact -->
@@ -318,38 +340,38 @@
         <!-- ---------------------------------------------------------- -->
 
         <div class=""></div>
-
-        <section class="index-db index-contact pt-5 d-none">
+        
+        <section class="pt-5 index-db index-db-contact index-contact d-none">
             <div class="container">
                 <div class="text-center">
                     <h2 data-translate="titleContact" class="line-decorated-db text-uppercase">Contact</h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="text-contact-us d-flex align-items-center" style="height: 25vh">
-                            <p data-translate="contactIntro" class="text-center">Do you have any questions? Please complete the form quickly here or visit our contact page for more information and location details.</p>
+                        <div class="text-contact-us d-flex align-items-center justify-content-center" style="height: 100%;">
+                            <p data-translate="contactIntro" class="pt-3 text-center">Do you have any questions? Please complete the quick form here or visit our contact page for more information and location details.</p>
+                        </div>
+                        <div class="text-center pt-3">
+                            <button data-translate="contactMore" type="button" id="id-contact-us" class="btn btn-tk-secondary go-to-pages">More</button>
                         </div>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6 d-flex justify-content-center align-items-center">
-                        <div class="box">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="box d-flex align-items-center justify-content-center">
                             <form id="quick-form">
                                 <div class="inputBox">
                                     <input id="quick-form-name" type="text" name="name" required onkeyup="this.setAttribute('value', this.value);" value="">
                                     <label data-translate="contactName">Name</label>
                                     <div id="quick-name-error" style="color: #DB3939; font-size: smaller;"></div>
-                                    <div class="quick-form-required" style="color: #DB3939; font-size: smaller;"></div>
                                 </div>
                                 <div class="row pt-3">
-                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-6">
                                         <div class="inputBox">
                                             <input id="quick-form-email" type="email" name="email" required onkeyup="this.setAttribute('value', this.value);" value="">
                                             <label data-translate="contactEmail">Email</label>
                                             <div id="quick-email-error" style="color: #DB3939; font-size: smaller;"></div>
-                                            <div class="quick-form-required" style="color: #DB3939; font-size: smaller;"></div>
-
                                         </div>
                                     </div>
-                                    <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <div class="col-6">
                                         <div class="inputBox">
                                             <input id="quick-form-phone" type="tel" maxlength="9" minlength="9" name="phone" required onkeyup="this.setAttribute('value', this.value);" value="">
                                             <label data-translate="contactPhone">Phone</label>
@@ -358,36 +380,23 @@
                                     </div>
                                 </div>
                                 <div class="pt-3">
-                                    <textarea id="quick-form-msg" name="message" class="form-control bg-transparent" rows="3" placeholder="Message" style="resize: none;" onkeyup="console.log(this.value);"></textarea>
-                                    <div class="quick-form-required" style="color: #DB3939; font-size: smaller;"></div>
+                                    <textarea id="quick-form-msg" name="message" class="form-control bg-transparent" rows="3" placeholder="Message" style="resize: none;"></textarea>
                                 </div>
                             </form>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="row pb-5">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="pt-1 text-center">
-                            <button data-translate="contactMore" type="button" id="id-contact-us" class="btn btn-tk-secondary go-to-pages">More</button>
-                        </div>
-                    </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
-                        <div class="pt-1 text-center">
+                        <div class="text-center pt-3">
                             <button id="quick-form-btn" data-translate="contactSend" type="button" class="btn btn-tk-secondary">Send</button>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        
 
-        <div class="goto-top">
+        <div class="go-top-arrow" id="go-top-btn">
             <a href="#space">
-                <lottie-player src="https://lottie.host/73a5212d-7b6c-476e-b6dc-38b1ac33b692/xJnc0ehHjD.json" autoplay loop class="lottie-arrow-up"></lottie-player>
+                <lottie-player src="https://lottie.host/73a5212d-7b6c-476e-b6dc-38b1ac33b692/xJnc0ehHjD.json" autoplay loop class="lottie-arrow-up wow animate__animated animate__fadeInUpBig animate__delay-1s"></lottie-player>
             </a>
         </div>
-        
 
         <footer id="footer" class="d-none">
             <div class="pt-3 custom-container">

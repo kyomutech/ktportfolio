@@ -41,6 +41,11 @@
         padding: 9px 0px;
         transition: all 0.5s ease 0s;
     }
+
+    p {
+        font-size: $px-15;
+    }
+
     .lottie-astronaut1,
     .lottie-astronaut2 {
         display: flex;
@@ -59,15 +64,10 @@
     .text-space div p {
         color: $color-palette-p-3;
         font-family: $font-anonymous-pro;
-        font-size: $px-15;
     }
     .lottie-down-arrow {
         height: $px-100;
         width: $px-100;
-    }
-
-    .index-db .container.swiper {
-        padding-top: $rem-2;
     }
 
     .index-db {
@@ -108,21 +108,33 @@
     .slider-organizer {
         display: none !important;
     }
-
-    .container .profile-row {
-        flex-direction: column; /* Stack the columns vertically */
-        height: 35vh !important;
-    }
     
     .border-right {
         border-right: none; /* Remove the division line */
     }
-    
-    .col-md-5 {
-        width: 100%; /* Make both columns take full width */
-        margin-bottom: 20px; /* Add some space between the two sections */
+
+    .index-db-contact {
+        height: 90vh;
     }
     
+    .cu-buttons div#cu-btn,
+    .cu-buttons div#qf-btn {
+        padding-top: $rem-1 !important;
+    }
+
+    .box,
+    .t-values {
+        padding-top: $rem-3;
+    }
+
+    .about-me-btn {
+        padding-top: $rem-5 !important;
+    }
+    
+    .go-top-arrow {
+        width: $px-30;
+        height: $px-30;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
