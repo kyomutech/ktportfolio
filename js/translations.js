@@ -137,7 +137,7 @@ const translations = {
 
         /* ---------------------------- ** ---------------------------- */
 
-        /******************* Page: Perfil Profesional *******************/
+        /******************* Page: Professional Profile *******************/
 
         /******************* Page: Contact us *******************/
         cuHeading: 'Get in touch',
